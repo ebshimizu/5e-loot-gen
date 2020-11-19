@@ -1,0 +1,1677 @@
+{
+  "Adamantine Armor": {
+    "id": "Adamantine Armor",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Ammunition +1": {
+    "id": "Ammunition +1",
+    "type": "weapon",
+    "rarity": "uncommon"
+  },
+  "Ammunition +2": {
+    "id": "Ammunition +2",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Ammunition +3": {
+    "id": "Ammunition +3",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Alchemy Jug": {
+    "id": "Alchemy Jug",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Amulet of Proof Against Detection and Location": {
+    "id": "Amulet of Proof Against Detection and Location",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Amulet of Health": {
+    "id": "Amulet of Health",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Amulet of the Planes": {
+    "id": "Amulet of the Planes",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Animated Shield": {
+    "id": "Animated Shield",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Apparatus of Kwalish": {
+    "id": "Apparatus of Kwalish",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Armor of Resistance": {
+    "id": "Armor of Resistance",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Vulnerability": {
+    "id": "Armor of Vulnerability",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1": {
+    "id": "Armor +1",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Arrow-catching Shield": {
+    "id": "Arrow-catching Shield",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +2": {
+    "id": "Armor +2",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Armor of Invulnerability": {
+    "id": "Armor of Invulnerability",
+    "type": "armor",
+    "rarity": "legendary"
+  },
+  "Armor +3": {
+    "id": "Armor +3",
+    "type": "armor",
+    "rarity": "legendary"
+  },
+  "Arrow of Slaying": {
+    "id": "Arrow of Slaying",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Bag of Beans": {
+    "id": "Bag of Beans",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Bag of Holding": {
+    "id": "Bag of Holding",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Bag of Devouring": {
+    "id": "Bag of Devouring",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Bag of Tricks": {
+    "id": "Bag of Tricks",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Bead of Force": {
+    "id": "Bead of Force",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Berserker Axe": {
+    "id": "Berserker Axe",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Boots of Elvenkind": {
+    "id": "Boots of Elvenkind",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Belt of Dwarvenkind": {
+    "id": "Belt of Dwarvenkind",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Belt of Hill Giant Strength": {
+    "id": "Belt of Hill Giant Strength",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Boots of Levitation": {
+    "id": "Boots of Levitation",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Boots of Speed": {
+    "id": "Boots of Speed",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Belt of Fire Giant Strength": {
+    "id": "Belt of Fire Giant Strength",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Belt of Frost Giant Strength": {
+    "id": "Belt of Frost Giant Strength",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Belt of Stone Giant Strength": {
+    "id": "Belt of Stone Giant Strength",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Belt of Cloud Giant Strength": {
+    "id": "Belt of Cloud Giant Strength",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Belt of Storm Giant Strength": {
+    "id": "Belt of Storm Giant Strength",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Boots of Striding and Springing": {
+    "id": "Boots of Striding and Springing",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Boots of the Winterlands": {
+    "id": "Boots of the Winterlands",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Bracers of Archery": {
+    "id": "Bracers of Archery",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Brooch of Shielding": {
+    "id": "Brooch of Shielding",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Broom of Flying": {
+    "id": "Broom of Flying",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Bowl of Commanding Water Elementals": {
+    "id": "Bowl of Commanding Water Elementals",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Bracers of Defense": {
+    "id": "Bracers of Defense",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Brazier of Commanding Fire Elementals": {
+    "id": "Brazier of Commanding Fire Elementals",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Cap of Water Breathing": {
+    "id": "Cap of Water Breathing",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Cape of the Mountebank": {
+    "id": "Cape of the Mountebank",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Candle of Invocation": {
+    "id": "Candle of Invocation",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Carpet of Flying": {
+    "id": "Carpet of Flying",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Circlet of Blasting": {
+    "id": "Circlet of Blasting",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Cloak of Elvenkind": {
+    "id": "Cloak of Elvenkind",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Censer of Controlling Air Elementals": {
+    "id": "Censer of Controlling Air Elementals",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Chime of Opening": {
+    "id": "Chime of Opening",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Cloak of Displacement": {
+    "id": "Cloak of Displacement",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Cloak of Arachnida": {
+    "id": "Cloak of Arachnida",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Cloak of Invisibility": {
+    "id": "Cloak of Invisibility",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Cloak of Protection": {
+    "id": "Cloak of Protection",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Cloak of the Manta Ray": {
+    "id": "Cloak of the Manta Ray",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Cloak of the Bat": {
+    "id": "Cloak of the Bat",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Cube of Force": {
+    "id": "Cube of Force",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Crystal Ball": {
+    "id": "Crystal Ball",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Crystal Ball of Mind Reading": {
+    "id": "Crystal Ball of Mind Reading",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Crystal Ball of Telepathy": {
+    "id": "Crystal Ball of Telepathy",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Crystal Ball of True Seeing": {
+    "id": "Crystal Ball of True Seeing",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Daern's Instant Fortress": {
+    "id": "Daern's Instant Fortress",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Cubic Gate": {
+    "id": "Cubic Gate",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Dagger of Venom": {
+    "id": "Dagger of Venom",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Dancing Sword": {
+    "id": "Dancing Sword",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Decanter of Endless Water": {
+    "id": "Decanter of Endless Water",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Deck of Illusions": {
+    "id": "Deck of Illusions",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Deck of Many Things": {
+    "id": "Deck of Many Things",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Defender": {
+    "id": "Defender",
+    "type": "weapon",
+    "rarity": "legendary"
+  },
+  "Demon Armor": {
+    "id": "Demon Armor",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Dragon Scale Mail": {
+    "id": "Dragon Scale Mail",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Dimensional Shackles": {
+    "id": "Dimensional Shackles",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Dragon Slayer": {
+    "id": "Dragon Slayer",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Driftglobe": {
+    "id": "Driftglobe",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Dust of Disappearance": {
+    "id": "Dust of Disappearance",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Dust of Dryness": {
+    "id": "Dust of Dryness",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Dust of Sneezing and Choking": {
+    "id": "Dust of Sneezing and Choking",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Dwarven Plate": {
+    "id": "Dwarven Plate",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Efreeti Chain": {
+    "id": "Efreeti Chain",
+    "type": "armor",
+    "rarity": "legendary"
+  },
+  "Dwarven Thrower": {
+    "id": "Dwarven Thrower",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Elemental Gem": {
+    "id": "Elemental Gem",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Efreeti Bottle": {
+    "id": "Efreeti Bottle",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Elven Chain": {
+    "id": "Elven Chain",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Elixir of Health": {
+    "id": "Elixir of Health",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Eversmoking Bottle": {
+    "id": "Eversmoking Bottle",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Eyes of Charming": {
+    "id": "Eyes of Charming",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Eyes of Minute Seeing": {
+    "id": "Eyes of Minute Seeing",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Eyes of the Eagle": {
+    "id": "Eyes of the Eagle",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Figurine of Wondrous Power: Bronze Griffon": {
+    "id": "Figurine of Wondrous Power: Bronze Griffon",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Figurine of Wondrous Power: Ebony Fly": {
+    "id": "Figurine of Wondrous Power: Ebony Fly",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Figurine of Wondrous Power: Golden Lions": {
+    "id": "Figurine of Wondrous Power: Golden Lions",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Figurine of Wondrous Power: Ivory Goats": {
+    "id": "Figurine of Wondrous Power: Ivory Goats",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Flame Tongue": {
+    "id": "Flame Tongue",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Figurine of Wondrous Power: Silver Raven": {
+    "id": "Figurine of Wondrous Power: Silver Raven",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Figurine of Wondrous Power: Marble Elephant": {
+    "id": "Figurine of Wondrous Power: Marble Elephant",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Figurine of Wondrous Power: Onyx Dog": {
+    "id": "Figurine of Wondrous Power: Onyx Dog",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Figurine of Wondrous Power: Serpentine Owl": {
+    "id": "Figurine of Wondrous Power: Serpentine Owl",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Folding Boat": {
+    "id": "Folding Boat",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Figurine of Wondrous Power: Obsidian Steed": {
+    "id": "Figurine of Wondrous Power: Obsidian Steed",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Frost Brand": {
+    "id": "Frost Brand",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Gauntlets of Ogre Power": {
+    "id": "Gauntlets of Ogre Power",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Gem of Brightness": {
+    "id": "Gem of Brightness",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Glamoured Studded Leather": {
+    "id": "Glamoured Studded Leather",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Giant Slayer": {
+    "id": "Giant Slayer",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Gloves of Missile Snaring": {
+    "id": "Gloves of Missile Snaring",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Gloves of Swimming and Climbing": {
+    "id": "Gloves of Swimming and Climbing",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Gloves of Thievery": {
+    "id": "Gloves of Thievery",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Goggles of Night": {
+    "id": "Goggles of Night",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Gem of Seeing": {
+    "id": "Gem of Seeing",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Hammer of Thunderbolts": {
+    "id": "Hammer of Thunderbolts",
+    "type": "weapon",
+    "rarity": "legendary"
+  },
+  "Hat of Disguise": {
+    "id": "Hat of Disguise",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Headband of Intellect": {
+    "id": "Headband of Intellect",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Helm of Comprehending Languages": {
+    "id": "Helm of Comprehending Languages",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Helm of Brilliance": {
+    "id": "Helm of Brilliance",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Holy Avenger": {
+    "id": "Holy Avenger",
+    "type": "weapon",
+    "rarity": "legendary"
+  },
+  "Helm of Telepathy": {
+    "id": "Helm of Telepathy",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Helm of Teleportation": {
+    "id": "Helm of Teleportation",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Heward's Handy Haversack": {
+    "id": "Heward's Handy Haversack",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Horn of Blasting": {
+    "id": "Horn of Blasting",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Immovable Rod": {
+    "id": "Immovable Rod",
+    "type": "rod",
+    "rarity": "uncommon"
+  },
+  "Horn of Valhalla: Brass": {
+    "id": "Horn of Valhalla: Brass",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Horn of Valhalla: Silver": {
+    "id": "Horn of Valhalla: Silver",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Horseshoes of Speed": {
+    "id": "Horseshoes of Speed",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Horn of Valhalla: Bronze": {
+    "id": "Horn of Valhalla: Bronze",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Horseshoes of a Zephyr": {
+    "id": "Horseshoes of a Zephyr",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Horn of Valhalla: Iron": {
+    "id": "Horn of Valhalla: Iron",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Instrument of the Bards: Doss Lute": {
+    "id": "Instrument of the Bards: Doss Lute",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Instrument of the Bards: Fochlucan Bandore": {
+    "id": "Instrument of the Bards: Fochlucan Bandore",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Instrument of the Bards: Mac-Fuirmidh Cittern": {
+    "id": "Instrument of the Bards: Mac-Fuirmidh Cittern",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Instrument of the Bards: Canaith Mandolin": {
+    "id": "Instrument of the Bards: Canaith Mandolin",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Instrument of the Bards: Cli Lyre": {
+    "id": "Instrument of the Bards: Cli Lyre",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Ioun Stone: Awareness": {
+    "id": "Ioun Stone: Awareness",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Ioun Stone: Protection": {
+    "id": "Ioun Stone: Protection",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Ioun Stone: Reserve": {
+    "id": "Ioun Stone: Reserve",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Ioun Stone: Sustenance": {
+    "id": "Ioun Stone: Sustenance",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Instrument of the Bards: Anstruth Harp": {
+    "id": "Instrument of the Bards: Anstruth Harp",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Ioun Stone: Absorption": {
+    "id": "Ioun Stone: Absorption",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Ioun Stone: Agility": {
+    "id": "Ioun Stone: Agility",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Ioun Stone: Fortitude": {
+    "id": "Ioun Stone: Fortitude",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Ioun Stone: Insight": {
+    "id": "Ioun Stone: Insight",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Ioun Stone: Intellect": {
+    "id": "Ioun Stone: Intellect",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Ioun Stone: Leadership": {
+    "id": "Ioun Stone: Leadership",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Ioun Stone: Strength": {
+    "id": "Ioun Stone: Strength",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Instrument of the Bards: Ollamh Harp": {
+    "id": "Instrument of the Bards: Ollamh Harp",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Ioun Stone: Greater Absorption": {
+    "id": "Ioun Stone: Greater Absorption",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Ioun Stone: Mastery": {
+    "id": "Ioun Stone: Mastery",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Ioun Stone: Regeneration": {
+    "id": "Ioun Stone: Regeneration",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Iron Bands of Bilarro": {
+    "id": "Iron Bands of Bilarro",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Javelin of Lightning": {
+    "id": "Javelin of Lightning",
+    "type": "weapon",
+    "rarity": "uncommon"
+  },
+  "Iron Flask": {
+    "id": "Iron Flask",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Mace of Disruption": {
+    "id": "Mace of Disruption",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Mace of Smiting": {
+    "id": "Mace of Smiting",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Luck Blade": {
+    "id": "Luck Blade",
+    "type": "weapon",
+    "rarity": "legendary"
+  },
+  "Keoghtom's Ointment": {
+    "id": "Keoghtom's Ointment",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Lantern of Revealing": {
+    "id": "Lantern of Revealing",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Mace of Terror": {
+    "id": "Mace of Terror",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Mantle of Spell Resistance": {
+    "id": "Mantle of Spell Resistance",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Manual of Bodily Health": {
+    "id": "Manual of Bodily Health",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Manual of Gainful Exercise": {
+    "id": "Manual of Gainful Exercise",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Manual of Golems": {
+    "id": "Manual of Golems",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Mariner's Armor": {
+    "id": "Mariner's Armor",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Medallion of Thoughts": {
+    "id": "Medallion of Thoughts",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Manual of Quickness of Action": {
+    "id": "Manual of Quickness of Action",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Mirror of Life Trapping": {
+    "id": "Mirror of Life Trapping",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Necklace of Adaptation": {
+    "id": "Necklace of Adaptation",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Necklace of Fireballs": {
+    "id": "Necklace of Fireballs",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Necklace of Prayer Beads": {
+    "id": "Necklace of Prayer Beads",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Mithral Armor": {
+    "id": "Mithral Armor",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Oil of Etherealness": {
+    "id": "Oil of Etherealness",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Nine Lives Stealer": {
+    "id": "Nine Lives Stealer",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Oathbow": {
+    "id": "Oathbow",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Nolzur's Marvelous Pigments": {
+    "id": "Nolzur's Marvelous Pigments",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Oil of Slipperiness": {
+    "id": "Oil of Slipperiness",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Philter of Love": {
+    "id": "Philter of Love",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Oil of Sharpness": {
+    "id": "Oil of Sharpness",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Pearl of Power": {
+    "id": "Pearl of Power",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Periapt of Health": {
+    "id": "Periapt of Health",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Periapt of Wound Closure": {
+    "id": "Periapt of Wound Closure",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Periapt of Proof Against Poison": {
+    "id": "Periapt of Proof Against Poison",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Plate Armor of Etherealness": {
+    "id": "Plate Armor of Etherealness",
+    "type": "armor",
+    "rarity": "legendary"
+  },
+  "Pipes of Haunting": {
+    "id": "Pipes of Haunting",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Pipes of the Sewers": {
+    "id": "Pipes of the Sewers",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Portable Hole": {
+    "id": "Portable Hole",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Potion of Climbing": {
+    "id": "Potion of Climbing",
+    "type": "potion",
+    "rarity": "common"
+  },
+  "Potion of Healing": {
+    "id": "Potion of Healing",
+    "type": "potion",
+    "rarity": "common"
+  },
+  "Potion of Healing (greater)": {
+    "id": "Potion of Healing (greater)",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Animal Friendship": {
+    "id": "Potion of Animal Friendship",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Fire Breath": {
+    "id": "Potion of Fire Breath",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Greater Healing": {
+    "id": "Potion of Greater Healing",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Growth": {
+    "id": "Potion of Growth",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Hill Giant Strength": {
+    "id": "Potion of Hill Giant Strength",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Clairvoyance": {
+    "id": "Potion of Clairvoyance",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Diminution": {
+    "id": "Potion of Diminution",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Fire Giant Strength": {
+    "id": "Potion of Fire Giant Strength",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Frost Giant Strength": {
+    "id": "Potion of Frost Giant Strength",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Gaseous Form": {
+    "id": "Potion of Gaseous Form",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Stone Giant Strength": {
+    "id": "Potion of Stone Giant Strength",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Superior Healing": {
+    "id": "Potion of Superior Healing",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Cloud Giant Strength": {
+    "id": "Potion of Cloud Giant Strength",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Potion of Flying": {
+    "id": "Potion of Flying",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Potion of Supreme Healing": {
+    "id": "Potion of Supreme Healing",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Potion of Storm Giant Strength": {
+    "id": "Potion of Storm Giant Strength",
+    "type": "potion",
+    "rarity": "legendary"
+  },
+  "Potion of Poison": {
+    "id": "Potion of Poison",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Resistance": {
+    "id": "Potion of Resistance",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Water Breathing": {
+    "id": "Potion of Water Breathing",
+    "type": "potion",
+    "rarity": "uncommon"
+  },
+  "Potion of Heroism": {
+    "id": "Potion of Heroism",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Invulnerability": {
+    "id": "Potion of Invulnerability",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Mind Reading": {
+    "id": "Potion of Mind Reading",
+    "type": "potion",
+    "rarity": "rare"
+  },
+  "Potion of Invisibility": {
+    "id": "Potion of Invisibility",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Potion of Longevity": {
+    "id": "Potion of Longevity",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Potion of Speed": {
+    "id": "Potion of Speed",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Potion of Vitality": {
+    "id": "Potion of Vitality",
+    "type": "potion",
+    "rarity": "very rare"
+  },
+  "Quaal's Feather Token": {
+    "id": "Quaal's Feather Token",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Ring of Animal Influence": {
+    "id": "Ring of Animal Influence",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Quiver of Ehlonna": {
+    "id": "Quiver of Ehlonna",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Ring of Air Elemental Command": {
+    "id": "Ring of Air Elemental Command",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Ring of Djinni Summoning": {
+    "id": "Ring of Djinni Summoning",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Ring of Earth Elemental Command": {
+    "id": "Ring of Earth Elemental Command",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Ring of Fire Elemental Command": {
+    "id": "Ring of Fire Elemental Command",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Ring of Water Elemental Command": {
+    "id": "Ring of Water Elemental Command",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Ring of Jumping": {
+    "id": "Ring of Jumping",
+    "type": "ring",
+    "rarity": "uncommon"
+  },
+  "Ring of Mind Shielding": {
+    "id": "Ring of Mind Shielding",
+    "type": "ring",
+    "rarity": "uncommon"
+  },
+  "Ring of Evasion": {
+    "id": "Ring of Evasion",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of Feather Falling": {
+    "id": "Ring of Feather Falling",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of Free Action": {
+    "id": "Ring of Free Action",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of Protection": {
+    "id": "Ring of Protection",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of Regeneration": {
+    "id": "Ring of Regeneration",
+    "type": "ring",
+    "rarity": "very rare"
+  },
+  "Ring of Invisibility": {
+    "id": "Ring of Invisibility",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Ring of Resistance": {
+    "id": "Ring of Resistance",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of Spell Storing": {
+    "id": "Ring of Spell Storing",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of Shooting Stars": {
+    "id": "Ring of Shooting Stars",
+    "type": "ring",
+    "rarity": "very rare"
+  },
+  "Ring of Swimming": {
+    "id": "Ring of Swimming",
+    "type": "ring",
+    "rarity": "uncommon"
+  },
+  "Ring of Warmth": {
+    "id": "Ring of Warmth",
+    "type": "ring",
+    "rarity": "uncommon"
+  },
+  "Ring of Water Walking": {
+    "id": "Ring of Water Walking",
+    "type": "ring",
+    "rarity": "uncommon"
+  },
+  "Ring of X-ray Vision": {
+    "id": "Ring of X-ray Vision",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of the Ram": {
+    "id": "Ring of the Ram",
+    "type": "ring",
+    "rarity": "rare"
+  },
+  "Ring of Telekinesis": {
+    "id": "Ring of Telekinesis",
+    "type": "ring",
+    "rarity": "very rare"
+  },
+  "Ring of Spell Turning": {
+    "id": "Ring of Spell Turning",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Ring of Three Wishes": {
+    "id": "Ring of Three Wishes",
+    "type": "ring",
+    "rarity": "legendary"
+  },
+  "Robe of Eyes": {
+    "id": "Robe of Eyes",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Robe of Scintillating Colors": {
+    "id": "Robe of Scintillating Colors",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Robe of Stars": {
+    "id": "Robe of Stars",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Robe of the Archmagi": {
+    "id": "Robe of the Archmagi",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Rod of Absorption": {
+    "id": "Rod of Absorption",
+    "type": "rod",
+    "rarity": "very rare"
+  },
+  "Robe of Useful Items": {
+    "id": "Robe of Useful Items",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Rod of Alertness": {
+    "id": "Rod of Alertness",
+    "type": "rod",
+    "rarity": "very rare"
+  },
+  "Rod of Lordly Might": {
+    "id": "Rod of Lordly Might",
+    "type": "rod",
+    "rarity": "legendary"
+  },
+  "Rod of the Pact Keeper +1": {
+    "id": "Rod of the Pact Keeper +1",
+    "type": "rod",
+    "rarity": "uncommon"
+  },
+  "Rod of Rulership": {
+    "id": "Rod of Rulership",
+    "type": "rod",
+    "rarity": "rare"
+  },
+  "Rod of the Pact Keeper +2": {
+    "id": "Rod of the Pact Keeper +2",
+    "type": "rod",
+    "rarity": "rare"
+  },
+  "Rod of Security": {
+    "id": "Rod of Security",
+    "type": "rod",
+    "rarity": "very rare"
+  },
+  "Rod of the Pact Keeper +3": {
+    "id": "Rod of the Pact Keeper +3",
+    "type": "rod",
+    "rarity": "very rare"
+  },
+  "Rod of Resurrection": {
+    "id": "Rod of Resurrection",
+    "type": "rod",
+    "rarity": "legendary"
+  },
+  "Rope of Climbing": {
+    "id": "Rope of Climbing",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Rope of Entanglement": {
+    "id": "Rope of Entanglement",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Sentinel Shield": {
+    "id": "Sentinel Shield",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Scroll of Protection": {
+    "id": "Scroll of Protection",
+    "type": "scroll",
+    "rarity": "rare"
+  },
+  "Scimitar of Speed": {
+    "id": "Scimitar of Speed",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Saddle of the Cavalier": {
+    "id": "Saddle of the Cavalier",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Sending Stones": {
+    "id": "Sending Stones",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Scarab of Protection": {
+    "id": "Scarab of Protection",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Shield +1": {
+    "id": "Shield +1",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Shield of Missile Attraction": {
+    "id": "Shield of Missile Attraction",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Shield +2": {
+    "id": "Shield +2",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Shield +3": {
+    "id": "Shield +3",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Spell Scroll: 1st Level": {
+    "id": "Spell Scroll: 1st Level",
+    "type": "scroll",
+    "rarity": "common"
+  },
+  "Spell Scroll: Cantrip": {
+    "id": "Spell Scroll: Cantrip",
+    "type": "scroll",
+    "rarity": "common"
+  },
+  "Spell Scroll: 2nd Level": {
+    "id": "Spell Scroll: 2nd Level",
+    "type": "scroll",
+    "rarity": "uncommon"
+  },
+  "Spell Scroll: 3rd Level": {
+    "id": "Spell Scroll: 3rd Level",
+    "type": "scroll",
+    "rarity": "uncommon"
+  },
+  "Spell Scroll: 4th Level": {
+    "id": "Spell Scroll: 4th Level",
+    "type": "scroll",
+    "rarity": "rare"
+  },
+  "Spell Scroll: 5th Level": {
+    "id": "Spell Scroll: 5th Level",
+    "type": "scroll",
+    "rarity": "rare"
+  },
+  "Spell Scroll: 6th Level": {
+    "id": "Spell Scroll: 6th Level",
+    "type": "scroll",
+    "rarity": "very rare"
+  },
+  "Spell Scroll: 7th Level": {
+    "id": "Spell Scroll: 7th Level",
+    "type": "scroll",
+    "rarity": "very rare"
+  },
+  "Spell Scroll: 8th Level": {
+    "id": "Spell Scroll: 8th Level",
+    "type": "scroll",
+    "rarity": "very rare"
+  },
+  "Spell Scroll: 9th Level": {
+    "id": "Spell Scroll: 9th Level",
+    "type": "scroll",
+    "rarity": "legendary"
+  },
+  "Slippers of Spider Climbing": {
+    "id": "Slippers of Spider Climbing",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Sovereign Glue": {
+    "id": "Sovereign Glue",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Spellguard Shield": {
+    "id": "Spellguard Shield",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Staff of Charming": {
+    "id": "Staff of Charming",
+    "type": "staff",
+    "rarity": "rare"
+  },
+  "Staff of Fire": {
+    "id": "Staff of Fire",
+    "type": "staff",
+    "rarity": "very rare"
+  },
+  "Sphere of Annihilation": {
+    "id": "Sphere of Annihilation",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Staff of Healing": {
+    "id": "Staff of Healing",
+    "type": "staff",
+    "rarity": "rare"
+  },
+  "Staff of Frost": {
+    "id": "Staff of Frost",
+    "type": "staff",
+    "rarity": "very rare"
+  },
+  "Staff of Power": {
+    "id": "Staff of Power",
+    "type": "staff",
+    "rarity": "very rare"
+  },
+  "Staff of the Adder": {
+    "id": "Staff of the Adder",
+    "type": "staff",
+    "rarity": "uncommon"
+  },
+  "Staff of Swarming Insects": {
+    "id": "Staff of Swarming Insects",
+    "type": "staff",
+    "rarity": "rare"
+  },
+  "Staff of Striking": {
+    "id": "Staff of Striking",
+    "type": "staff",
+    "rarity": "very rare"
+  },
+  "Staff of the Magi": {
+    "id": "Staff of the Magi",
+    "type": "staff",
+    "rarity": "legendary"
+  },
+  "Staff of the Python": {
+    "id": "Staff of the Python",
+    "type": "staff",
+    "rarity": "uncommon"
+  },
+  "Staff of the Woodlands": {
+    "id": "Staff of the Woodlands",
+    "type": "staff",
+    "rarity": "rare"
+  },
+  "Staff of Thunder and Lightning": {
+    "id": "Staff of Thunder and Lightning",
+    "type": "staff",
+    "rarity": "very rare"
+  },
+  "Staff of Withering": {
+    "id": "Staff of Withering",
+    "type": "staff",
+    "rarity": "rare"
+  },
+  "Sun Blade": {
+    "id": "Sun Blade",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Stone of Good Luck": {
+    "id": "Stone of Good Luck",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Stone of Controlling Earth Elementals": {
+    "id": "Stone of Controlling Earth Elementals",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
+  "Sword of Vengeance": {
+    "id": "Sword of Vengeance",
+    "type": "weapon",
+    "rarity": "uncommon"
+  },
+  "Sword of Life Stealing": {
+    "id": "Sword of Life Stealing",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Sword of Sharpness": {
+    "id": "Sword of Sharpness",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Sword of Answering": {
+    "id": "Sword of Answering",
+    "type": "weapon",
+    "rarity": "legendary"
+  },
+  "Sword of Wounding": {
+    "id": "Sword of Wounding",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Talisman of Pure Good": {
+    "id": "Talisman of Pure Good",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Talisman of Ultimate Evil": {
+    "id": "Talisman of Ultimate Evil",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Talisman of the Sphere": {
+    "id": "Talisman of the Sphere",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Tentacle Rod": {
+    "id": "Tentacle Rod",
+    "type": "rod",
+    "rarity": "rare"
+  },
+  "Tome of Clear Thought": {
+    "id": "Tome of Clear Thought",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Tome of Leadership and Influence": {
+    "id": "Tome of Leadership and Influence",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Tome of the Stilled Tongue": {
+    "id": "Tome of the Stilled Tongue",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Wand of Binding": {
+    "id": "Wand of Binding",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Trident of Fish Command": {
+    "id": "Trident of Fish Command",
+    "type": "weapon",
+    "rarity": "uncommon"
+  },
+  "Vicious Weapon": {
+    "id": "Vicious Weapon",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Vorpal Sword": {
+    "id": "Vorpal Sword",
+    "type": "weapon",
+    "rarity": "legendary"
+  },
+  "Tome of Understanding": {
+    "id": "Tome of Understanding",
+    "type": "wondrous item",
+    "rarity": "very rare"
+  },
+  "Universal Solvent": {
+    "id": "Universal Solvent",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Wand of Enemy Detection": {
+    "id": "Wand of Enemy Detection",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Wand of Fear": {
+    "id": "Wand of Fear",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Wand of Fireballs": {
+    "id": "Wand of Fireballs",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Wand of Magic Detection": {
+    "id": "Wand of Magic Detection",
+    "type": "wand",
+    "rarity": "uncommon"
+  },
+  "Wand of Magic Missiles": {
+    "id": "Wand of Magic Missiles",
+    "type": "wand",
+    "rarity": "uncommon"
+  },
+  "Wand of Secrets": {
+    "id": "Wand of Secrets",
+    "type": "wand",
+    "rarity": "uncommon"
+  },
+  "Wand of Lightning Bolts": {
+    "id": "Wand of Lightning Bolts",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Wand of Paralysis": {
+    "id": "Wand of Paralysis",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Wand of Polymorph": {
+    "id": "Wand of Polymorph",
+    "type": "wand",
+    "rarity": "very rare"
+  },
+  "Wand of Web": {
+    "id": "Wand of Web",
+    "type": "wand",
+    "rarity": "uncommon"
+  },
+  "Wand of the War Mage +1": {
+    "id": "Wand of the War Mage +1",
+    "type": "wand",
+    "rarity": "uncommon"
+  },
+  "Wand of Wonder": {
+    "id": "Wand of Wonder",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Wand of the War Mage +2": {
+    "id": "Wand of the War Mage +2",
+    "type": "wand",
+    "rarity": "rare"
+  },
+  "Wand of the War Mage +3": {
+    "id": "Wand of the War Mage +3",
+    "type": "wand",
+    "rarity": "very rare"
+  },
+  "Weapon of Warning": {
+    "id": "Weapon of Warning",
+    "type": "weapon",
+    "rarity": "uncommon"
+  },
+  "Weapon +1": {
+    "id": "Weapon +1",
+    "type": "weapon",
+    "rarity": "uncommon"
+  },
+  "Weapon +2": {
+    "id": "Weapon +2",
+    "type": "weapon",
+    "rarity": "rare"
+  },
+  "Weapon +3": {
+    "id": "Weapon +3",
+    "type": "weapon",
+    "rarity": "very rare"
+  },
+  "Wind Fan": {
+    "id": "Wind Fan",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Well of Many Worlds": {
+    "id": "Well of Many Worlds",
+    "type": "wondrous item",
+    "rarity": "legendary"
+  },
+  "Winged Boots": {
+    "id": "Winged Boots",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Wings of Flying": {
+    "id": "Wings of Flying",
+    "type": "wondrous item",
+    "rarity": "rare"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "test": {
+    "table": [
+      {
+        "weight": 1,
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 10
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table A",
+            "dieSize": "d6",
+            "dieCount": 1
+          }
+        ]
+      }
+    ],
+    "globalTreasure": [
+      {
+        "type": "cp",
+        "dieSize": "d6",
+        "dieCount": 6,
+        "multiplier": 100,
+        "unitValue": null
+      },
+      {
+        "type": "sp",
+        "dieSize": "d6",
+        "dieCount": 3,
+        "multiplier": 100,
+        "unitValue": null
+      },
+      {
+        "type": "gp",
+        "dieSize": "d6",
+        "dieCount": 2,
+        "multiplier": 10,
+        "unitValue": null
+      }
+    ]
+  }
+}

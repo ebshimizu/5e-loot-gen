@@ -1,0 +1,36 @@
+{
+  "Magic Item Table A": [
+    {
+      "id": "Potion of Healing",
+      "weight": 50
+    },
+    {
+      "id": "Spell Scroll: Cantrip",
+      "weight": 10
+    },
+    {
+      "id": "Potion of Climbing",
+      "weight": 10
+    },
+    {
+      "id": "Spell Scroll: 1st Level",
+      "weight": 20
+    },
+    {
+      "id": "Spell Scroll: 2nd Level",
+      "weight": 4
+    },
+    {
+      "id": "Potion of Healing (greater)",
+      "weight": 4
+    },
+    {
+      "id": "Bag of Holding",
+      "weight": 1
+    },
+    {
+      "id": "Driftglobe",
+      "weight": 1
+    }
+  ]
+}

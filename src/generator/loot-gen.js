@@ -36,7 +36,7 @@ function normalizeDistribution(distribution) {
 }
 
 /**
- * @param {Object} treasureRow Object containing the currency type, die size, die count, and unit value (an int, assumed to be gp)
+ * @param {Object} treasureRow Object containing the currency type, die size, die count, multiplier, and unit value (an int, assumed to be gp)
  * @returns {Object} Object containing currency count, type, and unit value
  */
 function rollTreasure(treasureRow) {
@@ -51,7 +51,7 @@ function rollTreasure(treasureRow) {
 
   // return the stuff
   return {
-    count,
+    count: count * treasureRow.multiplier,
     type: treasureRow.type,
     unitValue: treasureRow.unitValue
   };
@@ -64,9 +64,10 @@ function rollTreasure(treasureRow) {
  * @param {Object} items All available items, indexed by item name
  * @param {Object} filters Filters object (format still tbd a little)
  */
-function rollLoot(table, itemTables, items, filters) {
+function rollLoot(tableData, itemTables, items, filters) {
   // first, roll on the overall table and get the line
   // the loot table is just an array of objects, each of which has a weight
+  const table = tableData.table;
   const row = sampleWeightedDist(normalizeDistribution(table));
 
   // each row has a treasure field and a item tables field
@@ -83,7 +84,9 @@ function rollLoot(table, itemTables, items, filters) {
 
   // treasure is pretty easy, for each treasure entry, just roll it
   // treasure is a sparse table (duplicates don't matter we sum it)
-  for (const treasureRow of row.treasure) {
+  const treasureData = tableData.globalTreasure.concat(row.treasure);
+
+  for (const treasureRow of treasureData) {
     const treasureRoll = rollTreasure(treasureRow);
     treasureRolls.push(treasureRoll);
 
@@ -156,7 +159,7 @@ function rollLoot(table, itemTables, items, filters) {
 
 /**
  *
- * @param {Object[]} rolls An array of objects containing the info needed to toll on a loot table.
+ * @param {Object[]} rolls An array of objects containing the info needed to roll on a loot table.
  * Each object contains a lootTableId (which maps to lootTables), a count (int), and an optional filters param (an object)
  * @param {Object} lootTables Mapping from lootTableId to loot table object
  * @param {Object} itemTables Mapping from itemTableId to item table object
