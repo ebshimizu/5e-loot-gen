@@ -4,9 +4,20 @@
       <v-app-bar>
         <v-toolbar-title>{{ title }}</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn color="white" icon>
-          <v-icon>mdi-content-copy</v-icon>
-        </v-btn>
+        <v-tooltip left>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="white"
+              icon
+              v-bind="attrs"
+              v-on="on"
+              @click="copyToClipboard"
+            >
+              <v-icon>mdi-content-copy</v-icon>
+            </v-btn>
+          </template>
+          <span>Copy to Clipboard</span>
+        </v-tooltip>
       </v-app-bar>
       <v-card-text>
         <v-row>
@@ -60,6 +71,7 @@
 
 <script>
 import { ITEM_RARITY_COLORS, TREASURE_COLORS } from "../data/TREASURE_TYPE";
+import copy from "copy-to-clipboard";
 
 export default {
   name: "LootCard",
@@ -147,6 +159,20 @@ export default {
       }
 
       return items.join(", ");
+    },
+    copyToClipboard() {
+      // concat all the aggregated things
+      const items = [];
+      for (const type in this.totalTreasure) {
+        items.push(this.totalTreasure[type].format);
+      }
+
+      for (const id in this.aggregateItems) {
+        const item = this.aggregateItems[id];
+        items.push(`${item.count}x ${id}`);
+      }
+
+      copy(items.join(", "));
     }
   }
 };
