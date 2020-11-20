@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 import DICE from "../data/DICE";
 
 // distribution is an array of objects that have at minimum a weight field.
@@ -190,7 +192,8 @@ function lootGen(rolls, lootTables, itemTables, items) {
 
       // append to loot, add some metadata
       treasure.meta = {
-        rollNumber: i + 1
+        rollNumber: i + 1,
+        table: tableId
       };
 
       loot.push(treasure);
@@ -212,7 +215,7 @@ function lootGen(rolls, lootTables, itemTables, items) {
     }
   }
 
-  return { loot, totalValue };
+  return { loot, totalValue, uuid: uuidv4() };
 }
 
 export { lootGen };

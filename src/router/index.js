@@ -1,14 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Generator from "../views/Generator";
 
 Vue.use(VueRouter);
+
+// routes needed:
+// - home (generator page)
+// - edit loot tables (/lootTable/{table-id} for permanent linking?)
+// - edit item tables (/itemTable/{table-id})
+// - edit items (/items)
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Generator
   },
   {
     path: "/about",
