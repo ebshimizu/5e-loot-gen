@@ -9,6 +9,10 @@ export const TREASURE_TYPE = {
   other: "other"
 };
 
+export const TREASURE_TYPE_LIST = Object.keys(TREASURE_TYPE).map(t => {
+  return { text: TREASURE_TYPE[t], value: t }
+})
+
 // these are vuetify color strings
 export const TREASURE_COLORS = {
   cp: "brown darken-1",

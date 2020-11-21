@@ -1,8 +1,10 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Generator from "../views/Generator";
-import ItemTableList from "../views/ItemTableList";
-import ItemTableEdit from "../views/ItemTableEdit";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Generator from '../views/Generator';
+import ItemTableList from '../views/ItemTableList';
+import ItemTableEdit from '../views/ItemTableEdit';
+import LootTableList from '../views/LootTableList';
+import LootTableEdit from '../views/LootTableEdit';
 
 Vue.use(VueRouter);
 
@@ -14,25 +16,36 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Generator
+    path: '/',
+    name: 'Home',
+    component: Generator,
   },
   {
-    path: "/itemTable",
-    name: "Item Table",
+    path: '/itemTable',
+    name: 'Item Table',
     component: ItemTableList,
     children: [
       {
-        path: ":slug",
-        component: ItemTableEdit
-      }
-    ]
-  }
+        path: ':slug',
+        component: ItemTableEdit,
+      },
+    ],
+  },
+  {
+    path: '/lootTable',
+    name: 'Loot Table',
+    component: LootTableList,
+    children: [
+      {
+        path: ':slug',
+        component: LootTableEdit,
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
 });
 
 export default router;

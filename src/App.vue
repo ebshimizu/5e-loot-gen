@@ -23,7 +23,7 @@
       </v-list>
       <v-divider></v-divider>
       <v-list nav dense>
-        <v-list-item link
+        <v-list-item link to="/lootTable"
           ><v-list-item-content
             ><v-list-item-title
               >Edit Loot Tables</v-list-item-title

@@ -1,15 +1,17 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import slugify from "slugify";
-import _ from "lodash";
-import { MUTATION, ACTION } from "./ACTIONS";
-import { Persistence } from "./persistence";
+import Vue from 'vue';
+import Vuex from 'vuex';
+import slugify from 'slugify';
+import _ from 'lodash';
+import { v4 as uuidv4 } from "uuid";
 
-import Items from "@/data/base-items";
-import ItemTables from "@/data/base-item-tables";
-import LootTables from "@/data/base-loot-tables";
+import { MUTATION, ACTION } from './ACTIONS';
+import { Persistence } from './persistence';
 
-import { lootGen } from "../generator/loot-gen";
+import Items from '@/data/base-items';
+import ItemTables from '@/data/base-item-tables';
+import LootTables from '@/data/base-loot-tables';
+
+import { lootGen } from '../generator/loot-gen';
 
 Vue.use(Vuex);
 
@@ -19,21 +21,21 @@ export default new Vuex.Store({
     readOnlyData: {
       items: Items,
       itemTables: ItemTables,
-      lootTables: LootTables
+      lootTables: LootTables,
     },
     userData: {
       items: {},
       itemTables: {},
-      lootTables: {}
+      lootTables: {},
     },
-    history: []
+    history: [],
   },
   getters: {
-    items: state => {
+    items: (state) => {
       // todo: user-added items
       return state.readOnlyData.items;
     },
-    itemTables: state => {
+    itemTables: (state) => {
       // todo: user-added items
       return _.merge(
         {},
@@ -41,17 +43,21 @@ export default new Vuex.Store({
         state.userData.itemTables
       );
     },
-    lootTables: state => {
+    lootTables: (state) => {
       // todo: user-added items
-      return state.readOnlyData.lootTables;
+      return _.merge(
+        {},
+        state.readOnlyData.lootTables,
+        state.userData.lootTables
+      );
     },
     lootTableSelect: (state, getters) => {
-      return Object.keys(getters.lootTables).map(t => {
+      return Object.keys(getters.lootTables).map((t) => {
         return { text: t, value: t };
       });
     },
     itemsSelect: (state, getters) => {
-      return Object.keys(getters.items).map(item => {
+      return Object.keys(getters.items).map((item) => {
         return { text: item, value: item };
       });
     },
@@ -62,7 +68,7 @@ export default new Vuex.Store({
         types[items[itemId].type] = true;
       }
 
-      return Object.keys(types).map(type => {
+      return Object.keys(types).map((type) => {
         return { text: type, value: type };
       });
     },
@@ -74,7 +80,16 @@ export default new Vuex.Store({
       }
 
       return ret;
-    }
+    },
+    lootTablesBySlug: (state, getters) => {
+      const tables = getters.lootTables;
+      const ret = {};
+      for (const tableId in tables) {
+        ret[slugify(tableId)] = { table: tables[tableId], id: tableId };
+      }
+
+      return ret;
+    },
   },
   mutations: {
     [MUTATION.ADD_LOOT_HISTORY](state, result) {
@@ -87,8 +102,8 @@ export default new Vuex.Store({
     },
     [MUTATION.ADD_ITEM_TABLE_ROW](state, tableId) {
       state.userData.itemTables[tableId].push({
-        id: "",
-        weight: 1
+        id: '',
+        weight: 1,
       });
     },
     [MUTATION.DELETE_ITEM_TABLE_ROW](state, { tableId, rowIndex }) {
@@ -125,7 +140,7 @@ export default new Vuex.Store({
                 state.userData.lootTables[lootTable].table[rowIndex].items[
                   itemIndex
                 ],
-                "itemTableId",
+                'itemTableId',
                 newName
               );
             }
@@ -145,12 +160,12 @@ export default new Vuex.Store({
           const row = lootTable.table[rowIndex];
 
           // ok now we want to filter the row items
-          const newItems = row.items.filter(r => r.itemTableId !== tableId);
+          const newItems = row.items.filter((r) => r.itemTableId !== tableId);
 
           // set
           Vue.set(
             state.userData.lootTables[lootTableId].table[rowIndex],
-            "items",
+            'items',
             newItems
           );
         }
@@ -168,7 +183,7 @@ export default new Vuex.Store({
       Vue.set(state.userData.itemTables, destTableId, _.cloneDeep(toCopy));
     },
     [MUTATION.LOAD_USER_DATA](state) {
-      const data = localStorage.getItem("app.userData");
+      const data = localStorage.getItem('app.userData');
       if (data) {
         const parsedData = JSON.parse(data);
         // validate (remove user fields that are present in read-only)
@@ -178,7 +193,65 @@ export default new Vuex.Store({
           }
         }
 
-        Vue.set(state, "userData", parsedData);
+        Vue.set(state, 'userData', parsedData);
+      }
+    },
+    [MUTATION.ADD_LOOT_TABLE](state, tableId) {
+      Vue.set(state.userData.lootTables, tableId, {
+        table: [],
+        globalTreasure: [],
+      });
+    },
+    [MUTATION.DELETE_LOOT_TABLE](state, tableId) {
+      Vue.delete(state.userData.lootTables, tableId);
+    },
+    [MUTATION.RENAME_LOOT_TABLE](state, { oldName, newName }) {
+      Vue.set(
+        state.userData.lootTables,
+        newName,
+        state.userData.lootTables[oldName]
+      );
+      Vue.delete(state.userData.lootTables, oldName);
+    },
+    [MUTATION.COPY_LOOT_TABLE](state, { srcTableId, destTableId }) {
+      const toCopy =
+        srcTableId in state.userData.lootTables
+          ? state.userData.lootTables[srcTableId]
+          : state.readOnlyData.lootTables[srcTableId];
+
+      // clone, change uuids
+      const copy = _.cloneDeep(toCopy);
+      for (const row of copy.table) {
+        row.uuid = uuidv4();
+      }
+
+      Vue.set(state.userData.lootTables, destTableId, copy);
+    },
+    [MUTATION.UPDATE_LOOT_TABLE_ROW](state, { tableId, index, data }) {
+      // user data is the only mutable structure here
+      // if there's an exception, it means a user facing control wasn't properly disabled.
+      Vue.set(state.userData.lootTables[tableId].table, index, data);
+    },
+    [MUTATION.ADD_LOOT_TABLE_ROW](state, tableId) {
+      state.userData.lootTables[tableId].table.push({
+        treasure: [],
+        items: [],
+        weight: 1,
+        uuid: uuidv4()
+      });
+    },
+    [MUTATION.DELETE_LOOT_TABLE_ROW](state, { tableId, rowIndex }) {
+      // gotta splice it
+      const newArray = state.userData.lootTables[tableId].table;
+      newArray.splice(rowIndex, 1);
+      Vue.set(state.userData.lootTables[tableId], 'table', newArray);
+    },
+    [MUTATION.PREPROCESS_LOOT_TABLES](state) {
+      // assign uuid to each row in the table, used for list rendering only
+      for (const id in state.readOnlyData.lootTables) {
+        for (const index in state.readOnlyData.lootTables[id].table) {
+          Vue.set(state.readOnlyData.lootTables[id].table[index], 'uuid', uuidv4());
+        }
       }
     }
   },
@@ -189,8 +262,8 @@ export default new Vuex.Store({
           {
             lootTableId: table,
             count: rolls,
-            filters
-          }
+            filters,
+          },
         ],
         getters.lootTables,
         getters.itemTables,
@@ -202,8 +275,9 @@ export default new Vuex.Store({
       commit(MUTATION.ADD_LOOT_HISTORY, lootResult);
     },
     [ACTION.INIT_APP]({ commit }) {
+      commit(MUTATION.PREPROCESS_LOOT_TABLES);
       commit(MUTATION.LOAD_USER_DATA);
-    }
+    },
   },
-  modules: {}
+  modules: {},
 });
