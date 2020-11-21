@@ -26,7 +26,9 @@
             <td @click.stop="showTreasureEdit(index, row)" class="editable">
               {{ renderTreasure(row) }}
             </td>
-            <td></td>
+            <td @click.stop="showItemEdit(index, row)" class="editable">
+              {{ renderItems(row) }}
+            </td>
             <td>{{ d100Weights[index] }}</td>
             <td>
               <v-btn
@@ -130,6 +132,62 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <v-dialog v-model="itemEditDialog" max-width="800">
+      <v-card>
+        <v-card-title class="headline">Editing Item Value</v-card-title>
+        <v-card-text>
+          <v-row
+            v-for="(treasure, index) in activeRow.items"
+            :key="`${activeRow.uuid}-i-${index}`"
+          >
+            <v-col cols="2">
+              <v-text-field
+                type="number"
+                v-model.number="activeRow.items[index].dieCount"
+                label="Count"
+                min="1"
+                :disabled="readOnly"
+                @input="() => update(activeIndex, activeRow)"
+              >
+              </v-text-field>
+            </v-col>
+            <v-col cols="2">
+              <v-select
+                :items="diceSizes"
+                v-model="activeRow.items[index].dieSize"
+                label="Die Size"
+                @input="() => update(activeIndex, activeRow)"
+              >
+              </v-select>
+            </v-col>
+            <v-col cols="7">
+              <v-select
+                :items="itemTables"
+                v-model="activeRow.items[index].itemTableId"
+                label="Item Table"
+                @input="() => update(activeIndex, activeRow)"
+              >
+              </v-select
+            ></v-col>
+            <v-col cols="1" class="d-flex justify-center align-center">
+              <v-btn color="red" icon @click="deleteItemRow(index)">
+                <v-icon>mdi-delete</v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-btn color="green" @click="addItemRow()">
+            Add Row
+          </v-btn>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn color="primary" text @click="itemEditDialog = false">
+            Done
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -153,6 +211,7 @@ export default {
       activeRow: {},
       activeIndex: 0,
       treasureEditDialog: false,
+      itemEditDialog: false,
     };
   },
   created() {
@@ -212,6 +271,9 @@ export default {
 
       return rolls;
     },
+    itemTables() {
+      return this.$store.getters.itemTableSelect;
+    },
   },
   methods: {
     debouncedUpdate(rowIndex, rowData) {
@@ -235,6 +297,11 @@ export default {
       this.activeRow = row;
       this.treasureEditDialog = true;
     },
+    showItemEdit(index, row) {
+      this.activeIndex = index;
+      this.activeRow = row;
+      this.itemEditDialog = true;
+    },
     renderTreasure(row) {
       // string version of the treasure entries
       const formatted = [];
@@ -257,6 +324,17 @@ export default {
       if (formatted.length > 0) return formatted.join(', ');
       else return '----';
     },
+    renderItems(row) {
+      const formatted = [];
+      for (const item of row.items) {
+        formatted.push(
+          `${item.dieCount}${item.dieSize} rolls on ${item.itemTableId}`
+        );
+      }
+
+      if (formatted.length > 0) return formatted.join(', ');
+      else return '----';
+    },
     deleteTreasureRow(index) {
       this.activeRow.treasure.splice(index, 1);
       this.update(this.activeIndex, this.activeRow);
@@ -268,6 +346,18 @@ export default {
         dieCount: 1,
         multiplier: 1,
         unitValue: 1,
+      });
+      this.update(this.activeIndex, this.activeRow);
+    },
+    deleteItemRow(index) {
+      this.activeRow.items.splice(index, 1);
+      this.update(this.activeIndex, this.activeRow);
+    },
+    addItemRow() {
+      this.activeRow.items.push({
+        itemTableId: this.itemTables[0].value,
+        dieCount: 1,
+        dieSize: 'd4',
       });
       this.update(this.activeIndex, this.activeRow);
     },

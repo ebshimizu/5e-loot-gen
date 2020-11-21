@@ -56,6 +56,11 @@ export default new Vuex.Store({
         return { text: t, value: t };
       });
     },
+    itemTableSelect: (state, getters) => {
+      return Object.keys(getters.itemTables).map((t) => {
+        return { text: t, value: t };
+      });
+    },
     itemsSelect: (state, getters) => {
       return Object.keys(getters.items).map((item) => {
         return { text: item, value: item };
