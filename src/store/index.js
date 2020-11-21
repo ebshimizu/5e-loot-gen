@@ -98,6 +98,76 @@ export default new Vuex.Store({
       const newArray = state.userData.itemTables[tableId];
       newArray.splice(rowIndex, 1);
       Vue.set(state.userData.itemTables, tableId, newArray);
+    },
+    [MUTATION.RENAME_ITEM_TABLE](state, { oldName, newName }) {
+      // couple things to check here
+      // the ui will only let you do this if there are no name conflicts
+      // if you manage to do that anyway, uhhh file a bug report
+      // first, transfer the object
+      Vue.set(
+        state.userData.itemTables,
+        newName,
+        state.userData.itemTables[oldName]
+      );
+      Vue.delete(state.userData.itemTables, oldName);
+
+      // next, rename references to tables that used this one
+      // again, only user data is mutable
+      for (const lootTableId in state.userData.lootTables) {
+        const lootTable = state.userData.lootTables[lootTableId];
+        // we're looking in the items section
+        for (const rowIndex in lootTable.table) {
+          const row = lootTable.table[rowIndex];
+
+          for (const itemIndex in row.items) {
+            const itemEntry = row.items[itemIndex];
+            if (itemEntry.itemTableId === oldName) {
+              // yike
+              Vue.set(
+                state.userData.lootTables[lootTable].table[rowIndex].items[
+                  itemIndex
+                ],
+                "itemTableId",
+                newName
+              );
+            }
+          }
+        }
+      }
+    },
+    [MUTATION.DELETE_ITEM_TABLE](state, tableId) {
+      // delete, then remove references
+      // UI should warn about things that use the table
+      Vue.delete(state.userData.itemTables, tableId);
+
+      for (const lootTableId in state.userData.lootTables) {
+        const lootTable = state.userData.lootTables[lootTableId];
+        // we're looking in the items section
+        for (const rowIndex in lootTable.table) {
+          const row = lootTable.table[rowIndex];
+
+          // ok now we want to filter the row items
+          const newItems = row.items.filter(r => r.itemTableId !== tableId);
+
+          // set
+          Vue.set(
+            state.userData.lootTables[lootTableId].table[rowIndex],
+            "items",
+            newItems
+          );
+        }
+      }
+    },
+    [MUTATION.ADD_ITEM_TABLE](state, tableId) {
+      // relying on ui for validation here
+      Vue.set(state.userData.itemTables, tableId, []);
+    },
+    [MUTATION.COPY_ITEM_TABLE](state, { srcTableId, destTableId }) {
+      Vue.set(
+        state.userData.itemTables,
+        destTableId,
+        _.cloneDeep(state.userData.itemTables[srcTableId])
+      );
     }
   },
   actions: {

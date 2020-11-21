@@ -62,6 +62,7 @@
 
 <script>
 import slugify from "slugify";
+import { MUTATION } from "../store/ACTIONS";
 
 export default {
   name: "ItemTableList",
@@ -86,6 +87,9 @@ export default {
   methods: {
     slug(item) {
       return slugify(item.id);
+    },
+    deleteTable(item) {
+      this.$store.commit(MUTATION.DELETE_ITEM_TABLE, item.id);
     }
   }
 };
