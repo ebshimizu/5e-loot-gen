@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import slugify from "slugify";
 import _ from "lodash";
 import { MUTATION, ACTION } from "./ACTIONS";
+import { Persistence } from "./persistence";
 
 import Items from "@/data/base-items";
 import ItemTables from "@/data/base-item-tables";
@@ -12,11 +13,8 @@ import { lootGen } from "../generator/loot-gen";
 
 Vue.use(Vuex);
 
-const testMutableData = {
-  "User Table Test": _.cloneDeep(ItemTables["Magic Item Table A"])
-};
-
 export default new Vuex.Store({
+  plugins: [Persistence],
   state: {
     readOnlyData: {
       items: Items,
@@ -25,7 +23,7 @@ export default new Vuex.Store({
     },
     userData: {
       items: {},
-      itemTables: testMutableData, // temporary test
+      itemTables: {},
       lootTables: {}
     },
     history: []
@@ -163,11 +161,25 @@ export default new Vuex.Store({
       Vue.set(state.userData.itemTables, tableId, []);
     },
     [MUTATION.COPY_ITEM_TABLE](state, { srcTableId, destTableId }) {
-      Vue.set(
-        state.userData.itemTables,
-        destTableId,
-        _.cloneDeep(state.userData.itemTables[srcTableId])
-      );
+      const toCopy =
+        srcTableId in state.userData.itemTables
+          ? state.userData.itemTables[srcTableId]
+          : state.readOnlyData.itemTables[srcTableId];
+      Vue.set(state.userData.itemTables, destTableId, _.cloneDeep(toCopy));
+    },
+    [MUTATION.LOAD_USER_DATA](state) {
+      const data = localStorage.getItem("app.userData");
+      if (data) {
+        const parsedData = JSON.parse(data);
+        // validate (remove user fields that are present in read-only)
+        for (let id in parsedData.itemTables) {
+          if (id in state.readOnlyData.itemTables) {
+            delete parsedData.itemTables[id];
+          }
+        }
+
+        Vue.set(state, "userData", parsedData);
+      }
     }
   },
   actions: {
@@ -188,6 +200,9 @@ export default new Vuex.Store({
       lootResult.input = { table, rolls };
 
       commit(MUTATION.ADD_LOOT_HISTORY, lootResult);
+    },
+    [ACTION.INIT_APP]({ commit }) {
+      commit(MUTATION.LOAD_USER_DATA);
     }
   },
   modules: {}

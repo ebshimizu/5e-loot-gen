@@ -4,6 +4,21 @@
     "type": "armor",
     "rarity": "uncommon"
   },
+  "Adamantine Armor (chain mail)": {
+    "id": "Adamantine Armor (chain mail)",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Adamantine Armor (chain shirt)": {
+    "id": "Adamantine Armor (chain shirt)",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Adamantine Armor (scale mail)": {
+    "id": "Adamantine Armor (scale mail)",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
   "Ammunition +1": {
     "id": "Ammunition +1",
     "type": "weapon",
@@ -106,6 +121,21 @@
   },
   "Bag of Tricks": {
     "id": "Bag of Tricks",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Bag of Tricks (gray)": {
+    "id": "Bag of Tricks (gray)",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Bag of Tricks (rust)": {
+    "id": "Bag of Tricks (rust)",
+    "type": "wondrous item",
+    "rarity": "uncommon"
+  },
+  "Bag of Tricks (tan)": {
+    "id": "Bag of Tricks (tan)",
     "type": "wondrous item",
     "rarity": "uncommon"
   },
@@ -923,6 +953,11 @@
     "id": "Potion of Healing",
     "type": "potion",
     "rarity": "common"
+  },
+  "Potion of Healing (superior)": {
+    "id": "Potion of Healing (superior)",
+    "type": "potion",
+    "rarity": "rare"
   },
   "Potion of Healing (greater)": {
     "id": "Potion of Healing (greater)",

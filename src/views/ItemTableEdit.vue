@@ -32,7 +32,12 @@
             </td>
             <td>{{ d100Weights[index] }}</td>
             <td>
-              <v-btn color="red" icon @click="() => deleteRow(index)">
+              <v-btn
+                color="red"
+                icon
+                @click="() => deleteRow(index)"
+                :disabled="readOnly"
+              >
                 <v-icon>mdi-delete</v-icon>
               </v-btn>
             </td>

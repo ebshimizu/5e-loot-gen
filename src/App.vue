@@ -56,6 +56,8 @@
 </template>
 
 <script>
+import { ACTION } from "./store/ACTIONS";
+
 export default {
   name: "App",
 
@@ -65,6 +67,10 @@ export default {
     return {
       drawer: false
     };
+  },
+
+  beforeCreate() {
+    this.$store.dispatch(ACTION.INIT_APP);
   }
 };
 </script>
