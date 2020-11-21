@@ -132,6 +132,20 @@ export default {
 
           items[item.itemId].count += 1;
         }
+
+        for (const treasure of loot.treasure) {
+          if (!(treasure.type in this.lootEntry.totalValue)) {
+            const treasureId = `${treasure.unitValue} gp ${treasure.type}s`;
+            if (!(treasureId in items)) {
+              items[treasureId] = {
+                count: 0,
+                color: "pink darken-4"
+              };
+            }
+
+            items[treasureId].count += treasure.count;
+          }
+        }
       }
 
       return items;

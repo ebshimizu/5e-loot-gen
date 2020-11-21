@@ -1,5 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import slugify from "slugify";
+import _ from "lodash";
 import { MUTATION, ACTION } from "./ACTIONS";
 
 import Items from "@/data/base-items";
@@ -10,6 +12,10 @@ import { lootGen } from "../generator/loot-gen";
 
 Vue.use(Vuex);
 
+const testMutableData = {
+  "User Table Test": _.cloneDeep(ItemTables["Magic Item Table A"])
+};
+
 export default new Vuex.Store({
   state: {
     readOnlyData: {
@@ -19,7 +25,7 @@ export default new Vuex.Store({
     },
     userData: {
       items: {},
-      itemTables: {},
+      itemTables: testMutableData, // temporary test
       lootTables: {}
     },
     history: []
@@ -31,7 +37,11 @@ export default new Vuex.Store({
     },
     itemTables: state => {
       // todo: user-added items
-      return state.readOnlyData.itemTables;
+      return _.merge(
+        {},
+        state.readOnlyData.itemTables,
+        state.userData.itemTables
+      );
     },
     lootTables: state => {
       // todo: user-added items
@@ -57,11 +67,37 @@ export default new Vuex.Store({
       return Object.keys(types).map(type => {
         return { text: type, value: type };
       });
+    },
+    itemTablesBySlug: (state, getters) => {
+      const tables = getters.itemTables;
+      const ret = {};
+      for (const tableId in tables) {
+        ret[slugify(tableId)] = { table: tables[tableId], id: tableId };
+      }
+
+      return ret;
     }
   },
   mutations: {
     [MUTATION.ADD_LOOT_HISTORY](state, result) {
       state.history.unshift(result);
+    },
+    [MUTATION.UPDATE_ITEM_TABLE_ROW](state, { tableId, index, data }) {
+      // user data is the only mutable structure here
+      // if there's an exception, it means a user facing control wasn't properly disabled.
+      Vue.set(state.userData.itemTables[tableId], index, data);
+    },
+    [MUTATION.ADD_ITEM_TABLE_ROW](state, tableId) {
+      state.userData.itemTables[tableId].push({
+        id: "",
+        weight: 1
+      });
+    },
+    [MUTATION.DELETE_ITEM_TABLE_ROW](state, { tableId, rowIndex }) {
+      // gotta splice it
+      const newArray = state.userData.itemTables[tableId];
+      newArray.splice(rowIndex, 1);
+      Vue.set(state.userData.itemTables, tableId, newArray);
     }
   },
   actions: {
