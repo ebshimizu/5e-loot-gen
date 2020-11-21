@@ -15,7 +15,8 @@ const MUTATION = {
   DELETE_LOOT_TABLE_ROW: "Delete Loot Table Row",
   ADD_LOOT_TABLE_ROW: "Add Loot Table Row",
   UPDATE_LOOT_TABLE_ROW: "Update Loot Table Row",
-  PREPROCESS_LOOT_TABLES: "Preprocess Loot Tables"
+  PREPROCESS_LOOT_TABLES: "Preprocess Loot Tables",
+  UPDATE_LOOT_TABLE_GLOBAL: "Update Loot Table Global Treasure"
 };
 
 const ACTION = {

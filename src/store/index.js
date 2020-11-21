@@ -258,6 +258,9 @@ export default new Vuex.Store({
           Vue.set(state.readOnlyData.lootTables[id].table[index], 'uuid', uuidv4());
         }
       }
+    },
+    [MUTATION.UPDATE_LOOT_TABLE_GLOBAL](state, { tableId, globalTreasure }) {
+      Vue.set(state.userData.lootTables[tableId], 'globalTreasure', globalTreasure);
     }
   },
   actions: {

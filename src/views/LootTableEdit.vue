@@ -1,6 +1,87 @@
 <template>
   <div>
-    <h2>{{ title }}</h2>
+    <h2>{{ title }}{{ readOnly ? ' [Read Only]' : '' }}</h2>
+    <v-card elevation="2" outlined class="mb-2" v-if="table">
+      <v-card-title>Global Treasure</v-card-title>
+      <v-card-text>
+        <v-row
+          v-for="(treasure, index) in tableData.globalTreasure"
+          :key="index"
+        >
+          <v-col cols="2">
+            <v-text-field
+              type="number"
+              v-model.number="tableData.globalTreasure[index].dieCount"
+              label="Count"
+              min="1"
+              :disabled="readOnly"
+              @input="updateGlobalTreasure()"
+            >
+            </v-text-field>
+          </v-col>
+          <v-col cols="2">
+            <v-select
+              :items="diceSizes"
+              v-model="tableData.globalTreasure[index].dieSize"
+              label="Die Size"
+              :disabled="readOnly"
+              @input="updateGlobalTreasure()"
+            >
+            </v-select>
+          </v-col>
+          <v-col cols="2">
+            <v-text-field
+              type="number"
+              v-model.number="tableData.globalTreasure[index].multiplier"
+              label="Multiplier"
+              min="1"
+              :disabled="readOnly"
+              prepend-icon="mdi-close"
+              @input="updateGlobalTreasure()"
+            >
+            </v-text-field>
+          </v-col>
+          <v-col cols="3">
+            <v-select
+              :items="treasureTypes"
+              v-model="tableData.globalTreasure[index].type"
+              label="Type"
+              :disabled="readOnly"
+              @input="updateGlobalTreasure()"
+            >
+            </v-select
+          ></v-col>
+          <v-col cols="2">
+            <v-text-field
+              type="number"
+              v-model.number="tableData.globalTreasure[index].unitValue"
+              label="Unit Value"
+              min="1"
+              :disabled="readOnly"
+              @input="updateGlobalTreasure()"
+            >
+            </v-text-field>
+          </v-col>
+          <v-col cols="1" class="d-flex justify-center align-center">
+            <v-btn
+              color="red"
+              icon
+              @click="deleteGlobalTreasureRow(index)"
+              :disabled="readOnly"
+            >
+              <v-icon>mdi-delete</v-icon>
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-btn
+          color="green"
+          @click="addGlobalTreasureRow()"
+          :disabled="readOnly"
+        >
+          Add Row
+        </v-btn>
+      </v-card-text>
+    </v-card>
     <v-simple-table v-if="table">
       <template v-slot:default>
         <thead>
@@ -77,6 +158,7 @@
                 :items="diceSizes"
                 v-model="activeRow.treasure[index].dieSize"
                 label="Die Size"
+                :disabled="readOnly"
                 @input="() => update(activeIndex, activeRow)"
               >
               </v-select>
@@ -98,6 +180,7 @@
                 :items="treasureTypes"
                 v-model="activeRow.treasure[index].type"
                 label="Type"
+                :disabled="readOnly"
                 @input="() => update(activeIndex, activeRow)"
               >
               </v-select
@@ -114,12 +197,17 @@
               </v-text-field>
             </v-col>
             <v-col cols="1" class="d-flex justify-center align-center">
-              <v-btn color="red" icon @click="deleteTreasureRow(index)">
+              <v-btn
+                color="red"
+                icon
+                @click="deleteTreasureRow(index)"
+                :disabled="readOnly"
+              >
                 <v-icon>mdi-delete</v-icon>
               </v-btn>
             </v-col>
           </v-row>
-          <v-btn color="green" @click="addTreasureRow()">
+          <v-btn color="green" @click="addTreasureRow()" :disabled="readOnly">
             Add Row
           </v-btn>
         </v-card-text>
@@ -156,6 +244,7 @@
                 :items="diceSizes"
                 v-model="activeRow.items[index].dieSize"
                 label="Die Size"
+                :disabled="readOnly"
                 @input="() => update(activeIndex, activeRow)"
               >
               </v-select>
@@ -165,17 +254,23 @@
                 :items="itemTables"
                 v-model="activeRow.items[index].itemTableId"
                 label="Item Table"
+                :disabled="readOnly"
                 @input="() => update(activeIndex, activeRow)"
               >
               </v-select
             ></v-col>
             <v-col cols="1" class="d-flex justify-center align-center">
-              <v-btn color="red" icon @click="deleteItemRow(index)">
+              <v-btn
+                color="red"
+                icon
+                @click="deleteItemRow(index)"
+                :disabled="readOnly"
+              >
                 <v-icon>mdi-delete</v-icon>
               </v-btn>
             </v-col>
           </v-row>
-          <v-btn color="green" @click="addItemRow()">
+          <v-btn color="green" @click="addItemRow()" :disabled="readOnly">
             Add Row
           </v-btn>
         </v-card-text>
@@ -216,6 +311,7 @@ export default {
   },
   created() {
     this.update = _.debounce(this.debouncedUpdate, 250);
+    this.updateGlobalTreasure = _.debounce(this.debouncedGlobalUpdate, 250);
   },
   computed: {
     table() {
@@ -281,6 +377,12 @@ export default {
         tableId: this.table.id,
         index: rowIndex,
         data: rowData,
+      });
+    },
+    debouncedGlobalUpdate() {
+      this.$store.commit(MUTATION.UPDATE_LOOT_TABLE_GLOBAL, {
+        tableId: this.table.id,
+        globalTreasure: this.tableData.globalTreasure,
       });
     },
     addRow() {
@@ -360,6 +462,20 @@ export default {
         dieSize: 'd4',
       });
       this.update(this.activeIndex, this.activeRow);
+    },
+    addGlobalTreasureRow() {
+      this.tableData.globalTreasure.push({
+        type: 'gp',
+        dieSize: 'd6',
+        dieCount: 1,
+        multiplier: 1,
+        unitValue: 1,
+      });
+      this.debouncedGlobalUpdate();
+    },
+    deleteGlobalTreasureRow(index) {
+      this.tableData.globalTreasure.splice(index, 1);
+      this.debouncedGlobalUpdate();
     },
   },
 };
