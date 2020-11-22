@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import slugify from 'slugify';
 import _ from 'lodash';
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 import { MUTATION, ACTION } from './ACTIONS';
 import { Persistence } from './persistence';
@@ -27,7 +27,7 @@ export default new Vuex.Store({
       items: {},
       itemTables: {},
       lootTables: {},
-      presets: {}
+      presets: {},
     },
     history: [],
   },
@@ -254,7 +254,7 @@ export default new Vuex.Store({
         treasure: [],
         items: [],
         weight: 1,
-        uuid: uuidv4()
+        uuid: uuidv4(),
       });
     },
     [MUTATION.DELETE_LOOT_TABLE_ROW](state, { tableId, rowIndex }) {
@@ -267,13 +267,21 @@ export default new Vuex.Store({
       // assign uuid to each row in the table, used for list rendering only
       for (const id in state.readOnlyData.lootTables) {
         for (const index in state.readOnlyData.lootTables[id].table) {
-          Vue.set(state.readOnlyData.lootTables[id].table[index], 'uuid', uuidv4());
+          Vue.set(
+            state.readOnlyData.lootTables[id].table[index],
+            'uuid',
+            uuidv4()
+          );
         }
       }
     },
     [MUTATION.UPDATE_LOOT_TABLE_GLOBAL](state, { tableId, globalTreasure }) {
-      Vue.set(state.userData.lootTables[tableId], 'globalTreasure', globalTreasure);
-    }
+      Vue.set(
+        state.userData.lootTables[tableId],
+        'globalTreasure',
+        globalTreasure
+      );
+    },
   },
   actions: {
     [ACTION.GENERATE_LOOT]({ commit, getters }, { table, rolls, filters }) {
@@ -290,7 +298,7 @@ export default new Vuex.Store({
         getters.items
       );
 
-      lootResult.input = { table, rolls };
+      lootResult.input = { table, rolls, filters: _.cloneDeep(filters) };
 
       commit(MUTATION.ADD_LOOT_HISTORY, lootResult);
     },

@@ -55,6 +55,7 @@
           v-for="item in $store.state.history"
           :key="item.uuid"
           :lootEntry="item"
+          v-on:repeat="repeat"
         ></loot-card>
       </v-row>
     </v-col>
@@ -91,6 +92,13 @@ export default {
         rolls: this.rolls,
         filters: this.filters
       });
+    },
+    repeat({ rolls, filters, table }) {
+      this.selectedTable = table;
+      this.rolls = rolls;
+      this.filters = filters;
+
+      this.generate();
     }
   }
 };

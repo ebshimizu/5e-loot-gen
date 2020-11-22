@@ -29,7 +29,8 @@ function normalizeDistribution(distribution) {
 
     normalized.push({
       ...origin,
-      weight: currentThreshold
+      weight: currentThreshold,
+      originalWeight: origin.weight
     });
 
     currentThreshold += normWeight;

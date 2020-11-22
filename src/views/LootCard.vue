@@ -6,6 +6,14 @@
         <v-spacer></v-spacer>
         <v-tooltip left>
           <template v-slot:activator="{ on, attrs }">
+            <v-btn color="white" icon v-bind="attrs" v-on="on" @click="repeat">
+              <v-icon>mdi-repeat</v-icon>
+            </v-btn>
+          </template>
+          <span>Run Again</span>
+        </v-tooltip>
+        <v-tooltip left>
+          <template v-slot:activator="{ on, attrs }">
             <v-btn
               color="white"
               icon
@@ -21,7 +29,7 @@
       </v-app-bar>
       <v-card-text>
         <v-row>
-          <v-col cols="12">
+          <v-col cols="12" v-if="Object.keys(totalTreasure).length > 0">
             <span class="text-overline mr-2">Currency</span>
             <v-chip
               v-for="currency of totalTreasure"
@@ -32,7 +40,7 @@
               {{ currency.format }}
             </v-chip>
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12" v-if="Object.keys(aggregateItems).length > 0">
             <div class="text-overline">Items</div>
             <v-chip
               v-for="(item, id) of aggregateItems"
@@ -42,6 +50,10 @@
             >
               {{ item.count }}x {{ id }}
             </v-chip>
+          </v-col>
+          <v-col cols="12" v-if="filtersUsed">
+            <div class="text-overline">Active Filters</div>
+            {{ filters }}
           </v-col>
           <v-col>
             <v-btn block color="secondary" @click="showRawRolls = !showRawRolls"
@@ -60,6 +72,9 @@
                 >Roll {{ item.meta.rollNumber }} on
                 {{ item.meta.table }}</v-card-title
               >
+              <v-card-subtitle>{{
+                formatRow(item.selectedRow)
+              }}</v-card-subtitle>
               <v-card-text>{{ treasureList(item) }}</v-card-text>
             </v-card>
           </v-col>
@@ -70,17 +85,17 @@
 </template>
 
 <script>
-import { ITEM_RARITY_COLORS, TREASURE_COLORS } from "../data/TREASURE_TYPE";
-import copy from "copy-to-clipboard";
+import { ITEM_RARITY_COLORS, TREASURE_COLORS } from '../data/TREASURE_TYPE';
+import copy from 'copy-to-clipboard';
 
 export default {
-  name: "LootCard",
+  name: 'LootCard',
   props: {
-    lootEntry: Object
+    lootEntry: Object,
   },
   data() {
     return {
-      showRawRolls: false
+      showRawRolls: false,
     };
   },
   computed: {
@@ -88,7 +103,7 @@ export default {
       // format based on input
       // well, right now heterogeneous tables are illegal so...
       return `${this.lootEntry.input.rolls} roll${
-        this.lootEntry.input.rolls === 1 ? "" : "s"
+        this.lootEntry.input.rolls === 1 ? '' : 's'
       } on the ${this.lootEntry.input.table} table`;
     },
     totalTreasure() {
@@ -111,7 +126,7 @@ export default {
         formattedCurrencies[id] = {
           type: id,
           format: `${currencies[id]} ${id}`,
-          color: TREASURE_COLORS[id]
+          color: TREASURE_COLORS[id],
         };
       }
 
@@ -126,7 +141,7 @@ export default {
             const itemRarity = this.$store.getters.items[item.itemId].rarity;
             items[item.itemId] = {
               count: 0,
-              color: ITEM_RARITY_COLORS[itemRarity]
+              color: ITEM_RARITY_COLORS[itemRarity],
             };
           }
 
@@ -139,7 +154,7 @@ export default {
             if (!(treasureId in items)) {
               items[treasureId] = {
                 count: 0,
-                color: "pink darken-4"
+                color: 'pink darken-4',
               };
             }
 
@@ -149,9 +164,52 @@ export default {
       }
 
       return items;
-    }
+    },
+    filtersUsed() {
+      return (
+        this.lootEntry.input.filters.excludeType.length > 0 ||
+        this.lootEntry.input.filters.excludeId.length > 0
+      );
+    },
+    filters() {
+      const formatted = [];
+      for (const filter of this.lootEntry.input.filters.excludeType) {
+        formatted.push(`No ${filter}s`);
+      }
+
+      for (const filter of this.lootEntry.input.filters.excludeId) {
+        formatted.push(`No ${filter}`);
+      }
+
+      return formatted.join(', ');
+    },
   },
   methods: {
+    formatRow(row) {
+      // puts the treasure table row into a readable string format.
+      // just concats the treasure, items, and stuff
+      const lines = [];
+      for (const treasure of row.treasure) {
+        if (!(treasure.type in this.lootEntry.totalValue)) {
+          lines.push(
+            `${treasure.dieCount}${treasure.dieSize} x ${treasure.multiplier} ${treasure.type}`
+          );
+        } else {
+          lines.push(
+            `${treasure.dieCount}${treasure.dieSize} x ${treasure.multiplier} ${treasure.unitValue} gp ${treasure.type}s`
+          );
+        }
+      }
+
+      // items
+      for (const item of row.items) {
+        lines.push(
+          `${item.dieCount}${item.dieSize} rolls on ${item.itemTableId}`
+        );
+      }
+
+      return `[Weight ${row.originalWeight}]${lines.length > 0 ? ` ${lines.join(', ')}` : ''}`;
+    },
     treasureList(loot) {
       // formats the loot object
       // list treasure first
@@ -160,7 +218,7 @@ export default {
         if (!(treasure.type in this.lootEntry.totalValue)) {
           // lil extra formatting
           const type = `${treasure.unitValue} gp ${treasure.type}${
-            treasure.count === 1 ? "" : "s"
+            treasure.count === 1 ? '' : 's'
           }`;
           items.push(`${treasure.count} ${type}`);
         } else {
@@ -172,7 +230,7 @@ export default {
         items.push(item.itemId);
       }
 
-      return items.join(", ");
+      return items.join(', ');
     },
     copyToClipboard() {
       // concat all the aggregated things
@@ -186,8 +244,11 @@ export default {
         items.push(`${item.count}x ${id}`);
       }
 
-      copy(items.join(", "));
-    }
-  }
+      copy(items.join(', '));
+    },
+    repeat() {
+      this.$emit('repeat', this.lootEntry.input);
+    },
+  },
 };
 </script>
