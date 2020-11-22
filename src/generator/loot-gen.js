@@ -155,7 +155,8 @@ function rollLoot(tableData, itemTables, items, filters) {
   return {
     treasure: treasureRolls,
     items: itemList,
-    treasureValue: liquidValue
+    treasureValue: liquidValue,
+    selectedRow: row
   };
 }
 

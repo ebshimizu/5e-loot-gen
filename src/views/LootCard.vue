@@ -45,7 +45,7 @@
           </v-col>
           <v-col>
             <v-btn block color="secondary" @click="showRawRolls = !showRawRolls"
-              >Show Raw Rolls</v-btn
+              >Show Individual Rolls</v-btn
             >
           </v-col>
           <v-col cols="12" v-show="showRawRolls">

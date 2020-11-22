@@ -27,6 +27,7 @@ export default new Vuex.Store({
       items: {},
       itemTables: {},
       lootTables: {},
+      presets: {}
     },
     history: [],
   },
@@ -196,6 +197,17 @@ export default new Vuex.Store({
           if (id in state.readOnlyData.itemTables) {
             delete parsedData.itemTables[id];
           }
+        }
+
+        for (let id in parsedData.lootTables) {
+          if (id in state.readOnlyData.lootTables) {
+            delete parsedData.lootTables[id];
+          }
+        }
+
+        // too lazy to reset dev env
+        if (!('presets' in parsedData)) {
+          parsedData.presets = {};
         }
 
         Vue.set(state, 'userData', parsedData);

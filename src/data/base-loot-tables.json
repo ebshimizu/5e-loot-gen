@@ -1,8 +1,369 @@
 {
-  "test": {
+  "Individual CR 0-4": {
     "table": [
       {
-        "weight": 1,
+        "treasure": [
+          {
+            "type": "cp",
+            "dieSize": "d6",
+            "dieCount": 5,
+            "multiplier": 1,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 30
+      },
+      {
+        "treasure": [
+          {
+            "type": "sp",
+            "dieSize": "d6",
+            "dieCount": 4,
+            "multiplier": 1,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 30
+      },
+      {
+        "treasure": [
+          {
+            "type": "ep",
+            "dieSize": "d6",
+            "dieCount": 3,
+            "multiplier": 1,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 10
+      },
+      {
+        "treasure": [
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 3,
+            "multiplier": 1,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 25
+      },
+      {
+        "treasure": [
+          {
+            "type": "pp",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 1,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 5
+      }
+    ],
+    "globalTreasure": []
+  },
+  "Individual CR 5-10": {
+    "table": [
+      {
+        "treasure": [
+          {
+            "type": "cp",
+            "dieSize": "d6",
+            "dieCount": 4,
+            "multiplier": 100,
+            "unitValue": 1
+          },
+          {
+            "type": "ep",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 10,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 30
+      },
+      {
+        "treasure": [
+          {
+            "type": "sp",
+            "dieSize": "d6",
+            "dieCount": 6,
+            "multiplier": 10,
+            "unitValue": 1
+          },
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 10,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 30
+      },
+      {
+        "treasure": [
+          {
+            "type": "ep",
+            "dieSize": "d6",
+            "dieCount": 3,
+            "multiplier": 10,
+            "unitValue": 1
+          },
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 10,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 10
+      },
+      {
+        "treasure": [
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 4,
+            "multiplier": 10,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 25
+      },
+      {
+        "treasure": [
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 10,
+            "unitValue": 1
+          },
+          {
+            "type": "pp",
+            "dieSize": "d6",
+            "dieCount": 3,
+            "multiplier": 1,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 5
+      }
+    ],
+    "globalTreasure": []
+  },
+  "Individual CR 11-16": {
+    "table": [
+      {
+        "treasure": [
+          {
+            "type": "sp",
+            "dieSize": "d6",
+            "dieCount": 4,
+            "multiplier": 100,
+            "unitValue": 1
+          },
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 100,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 20
+      },
+      {
+        "treasure": [
+          {
+            "type": "ep",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 100,
+            "unitValue": 1
+          },
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 100,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 15
+      },
+      {
+        "treasure": [
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 100,
+            "unitValue": 1
+          },
+          {
+            "type": "pp",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 10,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 40
+      },
+      {
+        "treasure": [
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 100,
+            "unitValue": 1
+          },
+          {
+            "type": "pp",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 10,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 25
+      }
+    ],
+    "globalTreasure": []
+  },
+  "Individual CR 17+": {
+    "table": [
+      {
+        "treasure": [
+          {
+            "type": "ep",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1000,
+            "unitValue": 1
+          },
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 8,
+            "multiplier": 100,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 15
+      },
+      {
+        "treasure": [
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 1000,
+            "unitValue": 1
+          },
+          {
+            "type": "pp",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 100,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 40
+      },
+      {
+        "treasure": [
+          {
+            "type": "gp",
+            "dieSize": "d6",
+            "dieCount": 1,
+            "multiplier": 1000,
+            "unitValue": 1
+          },
+          {
+            "type": "pp",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 100,
+            "unitValue": 1
+          }
+        ],
+        "items": [],
+        "weight": 45
+      }
+    ],
+    "globalTreasure": []
+  },
+  "Hoard CR 0-4": {
+    "table": [
+      {
+        "treasure": [],
+        "items": [],
+        "weight": 6
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 10
+          }
+        ],
+        "items": [],
+        "weight": 10
+      },
+      {
+        "treasure": [
+          {
+            "type": "art",
+            "dieSize": "d4",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 25
+          }
+        ],
+        "items": [],
+        "weight": 10
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 50
+          }
+        ],
+        "items": [],
+        "weight": 10
+      },
+      {
         "treasure": [
           {
             "type": "gem",
@@ -15,10 +376,239 @@
         "items": [
           {
             "itemTableId": "Magic Item Table A",
-            "dieSize": "d6",
-            "dieCount": 1
+            "dieCount": 1,
+            "dieSize": "d6"
           }
-        ]
+        ],
+        "weight": 8
+      },
+      {
+        "treasure": [
+          {
+            "type": "art",
+            "dieSize": "d4",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 25
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table A",
+            "dieCount": 1,
+            "dieSize": "d6"
+          }
+        ],
+        "weight": 8
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 50
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table A",
+            "dieCount": 1,
+            "dieSize": "d6"
+          }
+        ],
+        "weight": 8
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 10
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table B",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 5
+      },
+      {
+        "treasure": [
+          {
+            "type": "art",
+            "dieSize": "d4",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 25
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table B",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 5
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 50
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table B",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 5
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 10
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table C",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 3
+      },
+      {
+        "treasure": [
+          {
+            "type": "art",
+            "dieSize": "d4",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 25
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table C",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 2
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 50
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table C",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 5
+      },
+      {
+        "treasure": [
+          {
+            "type": "art",
+            "dieSize": "d4",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 25
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table F",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 7
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 50
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table F",
+            "dieCount": 1,
+            "dieSize": "d4"
+          }
+        ],
+        "weight": 5
+      },
+      {
+        "treasure": [
+          {
+            "type": "art",
+            "dieSize": "d4",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 25
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table G",
+            "dieCount": 1,
+            "dieSize": "d1"
+          }
+        ],
+        "weight": 2
+      },
+      {
+        "treasure": [
+          {
+            "type": "gem",
+            "dieSize": "d6",
+            "dieCount": 2,
+            "multiplier": 1,
+            "unitValue": 50
+          }
+        ],
+        "items": [
+          {
+            "itemTableId": "Magic Item Table G",
+            "dieCount": 1,
+            "dieSize": "d1"
+          }
+        ],
+        "weight": 1
       }
     ],
     "globalTreasure": [
@@ -27,21 +617,21 @@
         "dieSize": "d6",
         "dieCount": 6,
         "multiplier": 100,
-        "unitValue": null
+        "unitValue": 1
       },
       {
         "type": "sp",
         "dieSize": "d6",
         "dieCount": 3,
         "multiplier": 100,
-        "unitValue": null
+        "unitValue": 1
       },
       {
         "type": "gp",
         "dieSize": "d6",
         "dieCount": 2,
         "multiplier": 10,
-        "unitValue": null
+        "unitValue": 1
       }
     ]
   }

@@ -4,6 +4,16 @@
     "type": "armor",
     "rarity": "uncommon"
   },
+  "Adamantine Armor (breastplate)": {
+    "id": "Adamantine Armor (breastplate)",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Adamantine Armor (splint)": {
+    "id": "Adamantine Armor (splint)",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
   "Adamantine Armor (chain mail)": {
     "id": "Adamantine Armor (chain mail)",
     "type": "armor",
@@ -69,8 +79,48 @@
     "type": "armor",
     "rarity": "rare"
   },
+  "Armor of Resistance (scale mail)": {
+    "id": "Armor of Resistance (scale mail)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Resistance (leather)": {
+    "id": "Armor of Resistance (leather)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Resistance (chain mail)": {
+    "id": "Armor of Resistance (chain mail)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Resistance (chain shirt)": {
+    "id": "Armor of Resistance (chain shirt)",
+    "type": "armor",
+    "rarity": "rare"
+  },
   "Armor of Vulnerability": {
     "id": "Armor of Vulnerability",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (chain shirt)": {
+    "id": "Armor +1 (chain shirt)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (chain mail)": {
+    "id": "Armor +1 (chain mail)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (leather)": {
+    "id": "Armor +1 (leather)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (scale mail)": {
+    "id": "Armor +1 (scale mail)",
     "type": "armor",
     "rarity": "rare"
   },
@@ -469,6 +519,11 @@
     "type": "wondrous item",
     "rarity": "uncommon"
   },
+  "Figurine of Wondrous Power (random)": {
+    "id": "Figurine of Wondrous Power (random)",
+    "type": "wondrous item",
+    "rarity": "rare"
+  },
   "Figurine of Wondrous Power: Bronze Griffon": {
     "id": "Figurine of Wondrous Power: Bronze Griffon",
     "type": "wondrous item",
@@ -628,6 +683,11 @@
     "id": "Immovable Rod",
     "type": "rod",
     "rarity": "uncommon"
+  },
+  "Horn of Valhalla: Silver or Brass": {
+    "id": "Horn of Valhalla: Silver or Brass",
+    "type": "wondrous item",
+    "rarity": "rare"
   },
   "Horn of Valhalla: Brass": {
     "id": "Horn of Valhalla: Brass",

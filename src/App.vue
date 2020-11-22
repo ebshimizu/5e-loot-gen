@@ -76,32 +76,4 @@ export default {
 </script>
 
 <style lang="scss">
-::-webkit-scrollbar {
-  display: none;
-  width: 12px;
-  background-color: rgb(18, 18, 18);
-}
-
-::-webkit-scrollbar-track {
-  margin-left: 2px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #505050;
-  border: solid 2px #202020;
-  border-radius: 7px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #b6b6b6;
-}
-
-.full-height::-webkit-scrollbar,
-.v-dialog::-webkit-scrollbar {
-  display: block;
-}
-
-.v-menu__content::-webkit-scrollbar {
-  display: block;
-}
 </style>

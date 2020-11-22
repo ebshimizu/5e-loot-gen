@@ -9,7 +9,7 @@
             outlined
             label="Rolls"
             min="0"
-            v-model="rolls"
+            v-model.number="rolls"
           ></v-text-field>
         </v-col>
         <v-col cols="8">
