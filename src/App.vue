@@ -23,24 +23,36 @@
       </v-list>
       <v-divider></v-divider>
       <v-list nav dense>
-        <v-list-item link to="/lootTable"
+        <v-subheader>CUSTOMIZATION</v-subheader>
+        <v-list-item to="/lootTable"
           ><v-list-item-content
             ><v-list-item-title
               >Edit Loot Tables</v-list-item-title
             ></v-list-item-content
           ></v-list-item
         >
-        <v-list-item link to="/itemTable"
+        <v-list-item to="/itemTable"
           ><v-list-item-content
             ><v-list-item-title
               >Edit Item Tables</v-list-item-title
             ></v-list-item-content
           ></v-list-item
         >
-        <v-list-item link to="/items"
+        <v-list-item to="/items"
           ><v-list-item-content
             ><v-list-item-title
               >Edit Item Pool</v-list-item-title
+            ></v-list-item-content
+          ></v-list-item
+        >
+      </v-list>
+      <v-divider></v-divider>
+      <v-list nav dense>
+        <v-subheader>OTHER TOOLS</v-subheader>
+        <v-list-item href="https://ebshimizu.github.io/5emm/"
+          ><v-list-item-content
+            ><v-list-item-title
+              >5e Monster Maker</v-list-item-title
             ></v-list-item-content
           ></v-list-item
         >
@@ -56,24 +68,23 @@
 </template>
 
 <script>
-import { ACTION } from "./store/ACTIONS";
+import { ACTION } from './store/ACTIONS';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {},
 
   data() {
     return {
-      drawer: false
+      drawer: false,
     };
   },
 
   beforeCreate() {
     this.$store.dispatch(ACTION.INIT_APP);
-  }
+  },
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
