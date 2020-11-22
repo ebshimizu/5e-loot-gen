@@ -64,6 +64,48 @@
         <router-view></router-view>
       </v-container>
     </v-main>
+
+    <v-footer app padless>
+      <v-card flat tile width="100%">
+        <v-card-text class="py-1 white--text text-center">
+          <span @click.stop="oglDialog = true" class="ogl-link"
+            >Open Gaming Licence</span
+          >
+          | v{{ $store.getters.majorVersion }}.{{
+            $store.getters.minorVersion
+          }}
+          build {{ $store.state.buildNumber }} | Created by
+          <strong>Falindrith</strong> |
+          <v-btn icon class="mx-1" href="https://twitter.com/falindrith"
+            ><v-icon>mdi-twitter</v-icon></v-btn
+          >
+          <v-btn
+            icon
+            class="mr-1"
+            href="https://github.com/ebshimizu/5e-loot-gen"
+            ><v-icon size="24px">mdi-github</v-icon></v-btn
+          >
+          <v-tooltip top>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" icon href="https://ko-fi.com/E1E2KHZ3"
+                ><v-avatar size="36px"
+                  ><img src="./assets/ko-fi-icon.png"/></v-avatar
+              ></v-btn>
+            </template>
+            Tip Jar
+          </v-tooltip>
+        </v-card-text>
+      </v-card>
+      <v-dialog v-model="oglDialog" max-width="800px">
+        <v-card>
+          <v-card-title>Open Gaming Licence Content</v-card-title>
+          <v-card-subtitle
+            >Some content used under the following license:</v-card-subtitle
+          >
+          <v-card-text v-html="oglText"></v-card-text>
+        </v-card>
+      </v-dialog>
+    </v-footer>
   </v-app>
 </template>
 

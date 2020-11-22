@@ -30,8 +30,16 @@ export default new Vuex.Store({
       presets: {},
     },
     history: [],
+    appVersion: process.env.PACKAGE_VERSION || '0.0.0',
+    buildNumber: process.env.BUILD_NUMBER || '0',
   },
   getters: {
+    majorVersion: (state) => {
+      return state.appVersion.split('.')[0];
+    },
+    minorVersion: (state) => {
+      return state.appVersion.split('.')[1];
+    },
     items: (state) => {
       return _.merge({}, state.readOnlyData.items, state.userData.items);
     },

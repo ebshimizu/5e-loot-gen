@@ -1,24 +1,4 @@
 # 5e-loot-gen
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Development
+This project was built with Vue v2. The standard `yarn install` followed by `yarn serve` to run the test server should get you up and running.
