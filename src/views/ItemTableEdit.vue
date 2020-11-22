@@ -61,6 +61,7 @@
 import _ from "lodash";
 import { MUTATION } from "../store/ACTIONS";
 
+// todo: highlight lines with missing item ids
 export default {
   name: "ItemTableEdit",
   data() {

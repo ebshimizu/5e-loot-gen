@@ -5,6 +5,7 @@ import ItemTableList from '../views/ItemTableList';
 import ItemTableEdit from '../views/ItemTableEdit';
 import LootTableList from '../views/LootTableList';
 import LootTableEdit from '../views/LootTableEdit';
+import ItemList from "../views/ItemList";
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,11 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/items',
+    name: 'Items',
+    component: ItemList
+  }
 ];
 
 const router = new VueRouter({

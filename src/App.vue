@@ -37,7 +37,7 @@
             ></v-list-item-content
           ></v-list-item
         >
-        <v-list-item link
+        <v-list-item link to="/items"
           ><v-list-item-content
             ><v-list-item-title
               >Edit Item Pool</v-list-item-title

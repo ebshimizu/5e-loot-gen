@@ -118,6 +118,12 @@ function rollLoot(tableData, itemTables, items, filters) {
 
     // filter the table
     const filteredTable = itemTables[itemRow.itemTableId].filter(item => {
+      // filter out invalid items
+      if (!(item.id in items)) {
+        console.log(`Warning: ${item.id} not found in item list, excluding from sampling.`);
+        return false;
+      }
+
       const itemInfo = items[item.id];
 
       // if the item type is in the excluded item type list, we don't want it

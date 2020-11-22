@@ -33,8 +33,7 @@ export default new Vuex.Store({
   },
   getters: {
     items: (state) => {
-      // todo: user-added items
-      return state.readOnlyData.items;
+      return _.merge({}, state.readOnlyData.items, state.userData.items);
     },
     itemTables: (state) => {
       // todo: user-added items
@@ -45,7 +44,6 @@ export default new Vuex.Store({
       );
     },
     lootTables: (state) => {
-      // todo: user-added items
       return _.merge(
         {},
         state.readOnlyData.lootTables,
@@ -281,6 +279,25 @@ export default new Vuex.Store({
         'globalTreasure',
         globalTreasure
       );
+    },
+    [MUTATION.ADD_ITEM](state, itemId) {
+      // assume no dupes, enforced by UI
+      Vue.set(state.userData.items, itemId, {
+        id: itemId,
+        type: 'wondrous item',
+        rarity: 'common',
+      });
+    },
+    [MUTATION.UPDATE_ITEM](state, { id, type, rarity }) {
+      Vue.set(state.userData.items, id, {
+        id,
+        type,
+        rarity,
+      });
+    },
+    [MUTATION.DELETE_ITEM](state, itemId) {
+      // delete from items, rest of app should be ok if the item tables aren't filtered
+      Vue.delete(state.userData.items, itemId);
     },
   },
   actions: {
