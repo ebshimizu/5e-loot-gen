@@ -307,6 +307,33 @@ export default new Vuex.Store({
       // delete from items, rest of app should be ok if the item tables aren't filtered
       Vue.delete(state.userData.items, itemId);
     },
+    [MUTATION.DELETE_ALL_USER_DATA](state) {
+      Vue.set(state, 'userData', {
+        items: {},
+        itemTables: {},
+        lootTables: {},
+        presets: {},
+      });
+    },
+    [MUTATION.IMPORT_USER_DATA](state, userData) {
+      // taking a bit of a blunt approach. Due to data relationships, if there are conflicting names
+      // they just get overwritten by newer data in the merge.
+      // minor validation check, only need 4 keys
+      try {
+        const userDataSubset = {
+          items: userData.items,
+          itemTables: userData.itemTables,
+          lootTables: userData.lootTables,
+          presets: userData.presets,
+        };
+
+        Vue.set(state, 'userData', _.merge({}, state.userData, userDataSubset));
+      } catch (e) {
+        // if we're missing one of those fields, log it.
+        // ui might have trouble detecting this but it's w/e for now
+        console.log(e);
+      }
+    },
   },
   actions: {
     [ACTION.GENERATE_LOOT]({ commit, getters }, { table, rolls, filters }) {

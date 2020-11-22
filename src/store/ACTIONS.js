@@ -19,7 +19,9 @@ const MUTATION = {
   UPDATE_LOOT_TABLE_GLOBAL: 'Update Loot Table Global Treasure',
   ADD_ITEM: 'Add Item',
   UPDATE_ITEM: 'Update Item',
-  DELETE_ITEM: 'Delete Item'
+  DELETE_ITEM: 'Delete Item',
+  DELETE_ALL_USER_DATA: 'Delete All User Data',
+  IMPORT_USER_DATA: 'Import User Data From FIle',
 };
 
 const ACTION = {
