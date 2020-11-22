@@ -111,6 +111,7 @@
 
 <script>
 import { ACTION } from './store/ACTIONS';
+import ogl from './data/OGL.txt';
 
 export default {
   name: 'App',
@@ -120,6 +121,8 @@ export default {
   data() {
     return {
       drawer: false,
+      oglDialog: false,
+            oglText: ogl.replace(/\n/g, '<br />'),
     };
   },
 
@@ -129,4 +132,9 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.ogl-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+</style>
