@@ -79,8 +79,8 @@
     "type": "armor",
     "rarity": "very rare"
   },
-  "Apparatus of Kwalish": {
-    "id": "Apparatus of Kwalish",
+  "Apparatus of the Crab": {
+    "id": "Apparatus of the Crab",
     "type": "wondrous item",
     "rarity": "legendary"
   },
@@ -499,8 +499,8 @@
     "type": "wondrous item",
     "rarity": "legendary"
   },
-  "Daern's Instant Fortress": {
-    "id": "Daern's Instant Fortress",
+  "Instant Fortress": {
+    "id": "Instant Fortress",
     "type": "wondrous item",
     "rarity": "rare"
   },
@@ -784,8 +784,8 @@
     "type": "wondrous item",
     "rarity": "rare"
   },
-  "Heward's Handy Haversack": {
-    "id": "Heward's Handy Haversack",
+  "Handy Haversack": {
+    "id": "Handy Haversack",
     "type": "wondrous item",
     "rarity": "rare"
   },
@@ -939,8 +939,8 @@
     "type": "wondrous item",
     "rarity": "legendary"
   },
-  "Iron Bands of Bilarro": {
-    "id": "Iron Bands of Bilarro",
+  "Iron Bands of Binding": {
+    "id": "Iron Bands of Binding",
     "type": "wondrous item",
     "rarity": "rare"
   },
@@ -969,8 +969,8 @@
     "type": "weapon",
     "rarity": "legendary"
   },
-  "Keoghtom's Ointment": {
-    "id": "Keoghtom's Ointment",
+  "Restorative Ointment": {
+    "id": "Restorative Ointment",
     "type": "wondrous item",
     "rarity": "uncommon"
   },
@@ -1064,8 +1064,8 @@
     "type": "weapon",
     "rarity": "very rare"
   },
-  "Nolzur's Marvelous Pigments": {
-    "id": "Nolzur's Marvelous Pigments",
+  "Marvelous Pigments": {
+    "id": "Marvelous Pigments",
     "type": "wondrous item",
     "rarity": "very rare"
   },
@@ -1279,8 +1279,8 @@
     "type": "potion",
     "rarity": "very rare"
   },
-  "Quaal's Feather Token": {
-    "id": "Quaal's Feather Token",
+  "Feather Token": {
+    "id": "Feather Token",
     "type": "wondrous item",
     "rarity": "rare"
   },
@@ -1289,8 +1289,8 @@
     "type": "ring",
     "rarity": "rare"
   },
-  "Quiver of Ehlonna": {
-    "id": "Quiver of Ehlonna",
+  "Efficient Quiver": {
+    "id": "Efficient Quiver",
     "type": "wondrous item",
     "rarity": "uncommon"
   },

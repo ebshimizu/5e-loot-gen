@@ -77,7 +77,7 @@ export default {
   },
   data() {
     return {
-      selectedTable: "",
+      selectedTable: this.$store.getters.lootTableSelect[0].value,
       rolls: 1,
       filters: {
         excludeType: [],
