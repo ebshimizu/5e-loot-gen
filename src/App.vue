@@ -5,7 +5,7 @@
       <v-toolbar-title>5e Loot Generator</v-toolbar-title>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary app>
+    <v-navigation-drawer v-model="drawer" temporary app>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title>5e Loot Generator</v-list-item-title>

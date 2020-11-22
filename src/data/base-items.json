@@ -4,6 +4,16 @@
     "type": "armor",
     "rarity": "uncommon"
   },
+  "Adamantine Armor (half plate)": {
+    "id": "Adamantine Armor (half plate)",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
+  "Adamantine Armor (plate)": {
+    "id": "Adamantine Armor (plate)",
+    "type": "armor",
+    "rarity": "uncommon"
+  },
   "Adamantine Armor (breastplate)": {
     "id": "Adamantine Armor (breastplate)",
     "type": "armor",
@@ -79,6 +89,31 @@
     "type": "armor",
     "rarity": "rare"
   },
+  "Armor of Resistance (plate)": {
+    "id": "Armor of Resistance (plate)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Resistance (half plate)": {
+    "id": "Armor of Resistance (half plate)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Resistance (studded leather)": {
+    "id": "Armor of Resistance (studded leather)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Resistance (splint)": {
+    "id": "Armor of Resistance (splint)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor of Resistance (breastplate)": {
+    "id": "Armor of Resistance (breastplate)",
+    "type": "armor",
+    "rarity": "rare"
+  },
   "Armor of Resistance (scale mail)": {
     "id": "Armor of Resistance (scale mail)",
     "type": "armor",
@@ -104,6 +139,21 @@
     "type": "armor",
     "rarity": "rare"
   },
+  "Armor +1": {
+    "id": "Armor +1",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (plate)": {
+    "id": "Armor +1 (plate)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (half plate)": {
+    "id": "Armor +1 (half plate)",
+    "type": "armor",
+    "rarity": "rare"
+  },
   "Armor +1 (chain shirt)": {
     "id": "Armor +1 (chain shirt)",
     "type": "armor",
@@ -124,8 +174,18 @@
     "type": "armor",
     "rarity": "rare"
   },
-  "Armor +1": {
-    "id": "Armor +1",
+  "Armor +1 (breastplate)": {
+    "id": "Armor +1 (breastplate)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (splint)": {
+    "id": "Armor +1 (splint)",
+    "type": "armor",
+    "rarity": "rare"
+  },
+  "Armor +1 (studded leather)": {
+    "id": "Armor +1 (studded leather)",
     "type": "armor",
     "rarity": "rare"
   },
@@ -139,6 +199,41 @@
     "type": "armor",
     "rarity": "very rare"
   },
+  "Armor +2 (splint)": {
+    "id": "Armor +2 (splint)",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Armor +2 (studded leather)": {
+    "id": "Armor +2 (studded leather)",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Armor +2 (breastplate)": {
+    "id": "Armor +2 (breastplate)",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Armor +2 (scale mail)": {
+    "id": "Armor +2 (scale mail)",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Armor +2 (leather)": {
+    "id": "Armor +2 (leather)",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Armor +2 (chain mail)": {
+    "id": "Armor +2 (chain mail)",
+    "type": "armor",
+    "rarity": "very rare"
+  },
+  "Armor +2 (chain shirt)": {
+    "id": "Armor +2 (chain shirt)",
+    "type": "armor",
+    "rarity": "very rare"
+  },
   "Armor of Invulnerability": {
     "id": "Armor of Invulnerability",
     "type": "armor",
@@ -146,6 +241,21 @@
   },
   "Armor +3": {
     "id": "Armor +3",
+    "type": "armor",
+    "rarity": "legendary"
+  },
+  "Armor +3 (leather)": {
+    "id": "Armor +3 (leather)",
+    "type": "armor",
+    "rarity": "legendary"
+  },
+  "Armor +3 (chain mail)": {
+    "id": "Armor +3 (chain mail)",
+    "type": "armor",
+    "rarity": "legendary"
+  },
+  "Armor +3 (chain shirt)": {
+    "id": "Armor +3 (chain shirt)",
     "type": "armor",
     "rarity": "legendary"
   },
@@ -368,6 +478,11 @@
     "id": "Crystal Ball",
     "type": "wondrous item",
     "rarity": "very rare"
+  },
+  "Crystal Ball (legendary)": {
+    "id": "Crystal Ball (legendary)",
+    "type": "wondrous item",
+    "rarity": "legendary"
   },
   "Crystal Ball of Mind Reading": {
     "id": "Crystal Ball of Mind Reading",
@@ -869,6 +984,11 @@
     "type": "weapon",
     "rarity": "rare"
   },
+  "+2/+3 Magic Armor (d12, see DMG)": {
+    "id": "+2/+3 Magic Armor (d12, see DMG)",
+    "type": "armor",
+    "rarity": "legendary"
+  },
   "Mantle of Spell Resistance": {
     "id": "Mantle of Spell Resistance",
     "type": "wondrous item",
@@ -1013,6 +1133,11 @@
     "id": "Potion of Healing",
     "type": "potion",
     "rarity": "common"
+  },
+  "Potion of Healing (supreme)": {
+    "id": "Potion of Healing (supreme)",
+    "type": "potion",
+    "rarity": "very rare"
   },
   "Potion of Healing (superior)": {
     "id": "Potion of Healing (superior)",
