@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="5">
+    <v-col cols="12" sm="5">
       <h2>Generator Settings</h2>
       <v-row>
         <v-col cols="4">
@@ -49,7 +49,7 @@
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="7">
+    <v-col cols="12" sm="7">
       <v-row>
         <loot-card
           v-for="item in $store.state.history"

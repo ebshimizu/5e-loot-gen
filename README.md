@@ -41,7 +41,7 @@ Note that in order to use custom item tables in the default loot tables, you wil
 
 User data can be imported and exported by using the corresponding options in the menu. When importing data, existing items, item tables, and loot tables that share an id with imported data will be **overwritten**, so be careful if you're duplicating entries. The exported data is in plain JSON format, and can be edited if ids need to be de-duplicated.
 
-## Notes and Details
+## Detauls and FAQ
 
 ### Item Names
 Item names for the default tables are SRD-compliant. Some items may have different names in published sources.

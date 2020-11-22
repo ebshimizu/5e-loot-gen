@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="4">
+    <v-col cols="12" sm="4">
       <h2>Loot Table List</h2>
       <v-btn block color="primary" class="mb-2" @click.stop="showNewDialog"
         >Add Loot Table</v-btn
@@ -71,7 +71,7 @@
         </template>
       </v-data-table>
     </v-col>
-    <v-col cols="8">
+    <v-col cols="12" sm="8">
       <router-view></router-view>
     </v-col>
     <v-dialog v-model="deleteDialog" max-width="350">
